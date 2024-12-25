@@ -15,10 +15,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        <Navbar />
+      <body className="dark">
         <main>{children}</main>
-        <Footer />
       </body>
     </html>
   );
