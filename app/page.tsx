@@ -78,7 +78,7 @@ const Home = () => {
           <ArrowUpRight size={17} className="ml-1" />
         </Link>
         <Link
-          href="/projects"
+          href="/skills"
           className="flex items-center transition-transform duration-200 hover:scale-110"
         >
           My Skills&nbsp;

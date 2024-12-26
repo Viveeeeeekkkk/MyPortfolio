@@ -1,7 +1,7 @@
 "use client";
 import { useRouter } from 'next/navigation';
 
-const About = () => {
+const Skills = () => {
   const router = useRouter();
 
   return (
@@ -27,11 +27,11 @@ const About = () => {
       </button>
 
       <div className="text-center">
-        <h1 className="text-3xl font-bold">About Me</h1>
-        <p className="mt-4">I am a tech enthusiast...</p>
+        <h1 className="text-3xl font-bold">Skills</h1>
+        <p className="mt-4">These are my skills...</p>
       </div>
     </div>
   );
 };
 
-export default About;
+export default Skills;

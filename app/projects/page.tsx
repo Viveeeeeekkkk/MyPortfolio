@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import React from "react";
 import { CardBody, CardContainer, CardItem } from "../../components/ui/3d-card";
@@ -7,12 +8,34 @@ import Link from "next/link";
 import rollsroyce from "../../components/assets/rollsroyce.jpg";
 
 const Projects = () => {
+  const router = useRouter();
+
   return (
-    <div className="p-6 min-h-screen">
-      <h1 className="text-3xl font-bold">Projects</h1>
-      <p className="mt-4">Here are some of my projects...</p>
+    <div className="p-6 min-h-screen relative">
+      <button
+        className="absolute top-4 left-4 p-2 bg-gray-700 text-white rounded-full hover:bg-gray-600"
+        onClick={() => router.push('/')}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1}
+          stroke="currentColor"
+          className="w-6 h-6"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
+      </button>
+
+      <div className="text-center"><h1 className="text-3xl font-bold">Projects</h1>
+      <p className="mt-4">Here are some of my projects...</p></div>
       <CardContainer className="inter-var">
-        <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+        <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
           <CardItem
             translateZ="50"
             className="text-xl font-bold text-neutral-600 dark:text-white"
