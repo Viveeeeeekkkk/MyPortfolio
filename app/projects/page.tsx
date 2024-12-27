@@ -5,7 +5,6 @@ import Image from "next/image";
 import React from "react";
 import { CardBody, CardContainer, CardItem } from "../../components/ui/3d-card";
 import Link from "next/link";
-import rollsroyce from "../../components/assets/rollsroyce.jpg";
 import MTJ from '../../components/assets/MTJ.png';
 import myportfolio from '../../components/assets/myportfolio.png';
 import stockastix from '../../components/assets/stockastix.png';
@@ -16,25 +15,52 @@ const Projects = () => {
 
   return (
     <div className="p-6 min-h-screen relative">
-      <button
-        className="absolute top-4 left-4 p-2 bg-gray-700 text-white rounded-full hover:bg-gray-600"
-        onClick={() => router.push("/")}
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={1}
-          stroke="currentColor"
-          className="w-6 h-6"
+      <div className="absolute top-5 left-5 group">
+        <div
+          className="flex items-center bg-gray-700 text-white rounded-full overflow-hidden cursor-pointer 
+          transition-all duration-300 group-hover:w-[280px] w-10 h-10"
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M15 19l-7-7 7-7"
-          />
-        </svg>
-      </button>
+          <div className="flex-shrink-0 p-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 22 24"
+              strokeWidth={1}
+              stroke="currentColor"
+              className="w-5 h-5"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </div>
+
+          <div
+            className="flex items-center space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ml-2"
+          >
+            <button
+              onClick={() => router.push("/")}
+              className="text-base px-2 py-1 rounded-md text-gray-300 hover:text-white"
+            >
+              Home
+            </button>
+            <button
+              onClick={() => router.push("/about")}
+              className="text-base px-2 py-1 rounded-md text-gray-300 hover:text-white"
+            >
+              About
+            </button>
+            <button
+              onClick={() => router.push("/skills")}
+              className="text-base px-2 py-1 rounded-md text-gray-300 hover:text-white"
+            >
+              Skills
+            </button>
+          </div>
+        </div>
+      </div>
 
       <div className="text-center font-playfair">
         <h1 className="text-3xl">Projects</h1>
@@ -42,7 +68,7 @@ const Projects = () => {
       </div>
       <div className="flex justify-evenly">
         <CardContainer className="inter-var">
-          <CardBody className="bg-gray-50 w-[600px] relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] h-auto rounded-xl p-6 border">
+          <CardBody className="w-[600px] relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.3] border-black/[0.1] h-auto rounded-xl p-6 border">
             <CardItem
               translateZ="50"
               className="text-xl font-bold text-neutral-600 dark:text-white"
@@ -79,7 +105,7 @@ const Projects = () => {
           </CardBody>
         </CardContainer>
         <CardContainer className="inter-var">
-          <CardBody className="bg-gray-50 w-[600px] relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] h-auto rounded-xl p-6 border">
+          <CardBody className=" w-[600px] relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.3] border-black/[0.1] h-auto rounded-xl p-6 border">
             <CardItem
               translateZ="50"
               className="text-xl font-bold text-neutral-600 dark:text-white"
@@ -118,7 +144,7 @@ const Projects = () => {
       </div>
       <div className="flex justify-evenly">
         <CardContainer className="inter-var">
-          <CardBody className="bg-gray-50 w-[600px] relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] h-auto rounded-xl p-6 border">
+          <CardBody className=" w-[600px] relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.3] border-black/[0.1] h-auto rounded-xl p-6 border">
             <CardItem
               translateZ="50"
               className="text-xl font-bold text-neutral-600 dark:text-white"
@@ -155,7 +181,7 @@ const Projects = () => {
           </CardBody>
         </CardContainer>
         <CardContainer className="inter-var">
-          <CardBody className="bg-gray-50 w-[600px] relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] h-auto rounded-xl p-6 border">
+          <CardBody className=" w-[600px] relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.3] border-black/[0.1] h-auto rounded-xl p-6 border">
             <CardItem
               translateZ="50"
               className="text-xl font-bold text-neutral-600 dark:text-white"
