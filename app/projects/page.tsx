@@ -5,10 +5,10 @@ import Image from "next/image";
 import React from "react";
 import { CardBody, CardContainer, CardItem } from "../../components/ui/3d-card";
 import Link from "next/link";
-import MTJ from '../../components/assets/MTJ.png';
-import myportfolio from '../../components/assets/myportfolio.png';
-import stockastix from '../../components/assets/stockastix.png';
-import mymoney from '../../components/assets/mymoney.png';
+import MTJ from "../../components/assets/MTJ.png";
+import myportfolio from "../../components/assets/myportfolio.png";
+import stockastix from "../../components/assets/stockastix.png";
+import mymoney from "../../components/assets/mymoney.png";
 
 const Projects = () => {
   const router = useRouter();
@@ -37,9 +37,7 @@ const Projects = () => {
             </svg>
           </div>
 
-          <div
-            className="flex items-center space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ml-2"
-          >
+          <div className="flex items-center space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ml-2">
             <button
               onClick={() => router.push("/")}
               className="text-base px-2 py-1 rounded-md text-gray-300 hover:text-white"
@@ -96,7 +94,8 @@ const Projects = () => {
               </CardItem>
               <CardItem
                 translateZ={20}
-                as="button"
+                as={Link}
+                href='/projects/my-trade-journal'
                 className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
               >
                 Know more...
@@ -133,7 +132,8 @@ const Projects = () => {
               </CardItem>
               <CardItem
                 translateZ={20}
-                as="button"
+                as={Link}
+                href='/projects/stockastix'
                 className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
               >
                 Know more...
@@ -172,7 +172,8 @@ const Projects = () => {
               </CardItem>
               <CardItem
                 translateZ={20}
-                as="button"
+                as={Link}
+                href='/projects/my-money'
                 className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
               >
                 Know more...
@@ -204,11 +205,13 @@ const Projects = () => {
                 href="/"
                 className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
               >
-                Try now →<br/>(Do not click...you might be redirected to the beginning page)
+                Try now →<br />
+                (Do not click...you might be redirected to the beginning page)
               </CardItem>
               <CardItem
                 translateZ={20}
-                as="button"
+                as={Link}
+                href='/projects/portfolio'
                 className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
               >
                 Know more...
