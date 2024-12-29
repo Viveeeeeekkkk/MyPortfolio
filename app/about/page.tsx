@@ -6,11 +6,10 @@ const About = () => {
   const router = useRouter();
 
   return (
-    <div className="h-[40rem] w-full rounded-md flex md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
+    <div className="min-h-screen w-full rounded-md flex md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
       <div className="absolute top-5 left-5 group">
         <div
-          className="flex items-center text-white rounded-full overflow-hidden cursor-pointer 
-    transition-all duration-300 group-hover:w-[270px] w-10 h-10"
+          className="flex items-center text-white rounded-full overflow-hidden cursor-pointer transition-all duration-300 group-hover:w-[270px] w-10 h-10"
           style={{
             background: "linear-gradient(45deg, #6a1b9a, #d81b60)",
           }}
@@ -58,16 +57,27 @@ const About = () => {
         className="-top-40 left-0 md:left-60 md:-top-20"
         fill="white"
       />
-      <div className="p-4 max-w-7xl mx-auto relative z-10 w-full pt-20 md:pt-0">
-        <h1 className="text-4xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
-          This Is About <br /> ME...!
+      <div className="p-4 mt-[14%] max-w-7xl mx-auto relative z-10 w-full pt-20 md:pt-0">
+        <h1 className="text-4xl md:text-6xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+          Who am I?
         </h1>
-        <p className="mt-4 font-playfair text-xl text-neutral-300 max-w-xl text-center mx-auto">
-          Spotlight effect is a great way to draw attention to a specific part
-          of the page. Here, we are drawing the attention towards the text
-          section of the page. I don&apos;t know why but I&apos;m running out of
-          copy.
+        <p className="mt-4 font-playfair text-2xl text-neutral-200 max-w-2xl text-justify mx-auto">
+          <i>Vivek</i> — a 22-year-old developer with a passion for building
+          things that matter.Graduating in 2024 from MGIT [Hyderabad], was just
+          the beginning. Since then, I’ve dived straight into freelancing as a
+          Full-Stack Developer and Software Developer. Why? Because I’ve always
+          been drawn to the process of creating something meaningful from
+          scratch—it’s where I find my purpose. There’s something exciting about
+          taking an idea and transforming it into a functional reality. <br />
+          <br />
+          Every project I take on pushes me to think differently, adapt quickly,
+          and stay creative. Freelancing has been a journey of learning,
+          problem-solving, and connecting with people who share the same drive
+          for innovation.
         </p>
+        <h1 className="mt-16 text-4xl md:text-6xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+          What are my skills?
+        </h1>
       </div>
     </div>
   );
