@@ -9,15 +9,18 @@ const About = () => {
     <div className="h-[40rem] w-full rounded-md flex md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
       <div className="absolute top-5 left-5 group">
         <div
-          className="flex items-center bg-gray-700 text-white rounded-full overflow-hidden cursor-pointer 
-          transition-all duration-300 group-hover:w-[280px] w-10 h-10"
+          className="flex items-center text-white rounded-full overflow-hidden cursor-pointer 
+    transition-all duration-300 group-hover:w-[270px] w-10 h-10"
+          style={{
+            background: "linear-gradient(45deg, #6a1b9a, #d81b60)",
+          }}
         >
           <div className="flex-shrink-0 p-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 22 24"
-              strokeWidth={1}
+              strokeWidth={2}
               stroke="currentColor"
               className="w-5 h-5"
             >
@@ -29,24 +32,22 @@ const About = () => {
             </svg>
           </div>
 
-          <div
-            className="flex items-center space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ml-2"
-          >
+          <div className="flex items-center space-x-4 opacity-0 font-playfair group-hover:opacity-100 transition-opacity duration-300 ml-2">
             <button
               onClick={() => router.push("/")}
-              className="text-base px-2 py-1 rounded-md text-gray-300 hover:text-white"
+              className="text-[18px] px-2 py-1 rounded-md text-gray-200 hover:text-white"
             >
               Home
             </button>
             <button
-              onClick={() => router.push("/projects")}
-              className="text-base px-2 py-1 rounded-md text-gray-300 hover:text-white"
+              onClick={() => router.push("/work")}
+              className="text-[18px] px-2 py-1 rounded-md text-gray-200 hover:text-white"
             >
-              Projects
+              Work
             </button>
             <button
               onClick={() => router.push("/skills")}
-              className="text-base px-2 py-1 rounded-md text-gray-300 hover:text-white"
+              className="text-[18px] px-2 py-1 rounded-md text-gray-200 hover:text-white"
             >
               Skills
             </button>

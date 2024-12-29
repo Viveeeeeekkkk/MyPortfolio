@@ -1,15 +1,14 @@
 "use client";
 import { useRouter } from "next/navigation";
-
-const Skills = () => {
+const MyTradeJournal = () => {
   const router = useRouter();
 
   return (
-    <div className="p-6 min-h-screen">
+    <div className="p-6">
       <div className="absolute top-5 left-5 group">
         <div
           className="flex items-center text-white rounded-full overflow-hidden cursor-pointer 
-    transition-all duration-300 group-hover:w-[270px] w-10 h-10"
+    transition-all duration-300 group-hover:w-[350px] w-10 h-10"
           style={{
             background: "linear-gradient(45deg, #6a1b9a, #d81b60)",
           }}
@@ -50,16 +49,35 @@ const Skills = () => {
             >
               Work
             </button>
+            <button
+              onClick={() => router.push("/skills")}
+              className="text-[18px] px-2 py-1 rounded-md text-gray-200 hover:text-white"
+            >
+              Skills
+            </button>
           </div>
         </div>
       </div>
-
-      <div className="text-center">
-        <h1 className="text-3xl font-bold">Skills</h1>
-        <p className="mt-4">These are my skills...</p>
+      <h1 className="text-4xl font-bold">My Money</h1>
+      <p className="mt-4 text-lg">
+        My Trade Journal is a platform designed to help traders document and
+        analyze their trades. It provides insights to improve decision-making
+        and track performance.
+      </p>
+      <div className="mt-6">
+        <h2 className="text-2xl font-bold">Features:</h2>
+        <ul className="list-disc ml-6 mt-2">
+          <li>Document trade details like entry, exit, and strategy.</li>
+          <li>Generate performance reports and charts.</li>
+          <li>Analyze trends and patterns to improve strategies.</li>
+        </ul>
+      </div>
+      <div className="mt-6">
+        <h2 className="text-2xl font-bold">Technologies Used:</h2>
+        <p>React, Node.js, MongoDB, and Tailwind CSS</p>
       </div>
     </div>
   );
 };
 
-export default Skills;
+export default MyTradeJournal;

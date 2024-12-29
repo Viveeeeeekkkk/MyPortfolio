@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { BackgroundLines } from "@/components/ui/background-lines";
@@ -11,17 +11,64 @@ import linkedin from "../components/assets/linkedin.svg";
 import whatsapp from "../components/assets/whatsapp.svg";
 import profileVivek from "../components/assets/profileVivek.jpg";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
+import { Code, Coffee, Repeat, PenTool } from "lucide-react";
+
+const wordsWithIcons = [
+  { word: "Coffee", icon: <Coffee size={28} /> },
+  { word: "Code", icon: <Code size={28} /> },
+  { word: "Create", icon: <PenTool size={28} /> },
+  { word: "Repeat", icon: <Repeat size={28} /> },
+];
 
 const Home = () => {
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentWordIndex(
+        (prevIndex) => (prevIndex + 1) % wordsWithIcons.length
+      );
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <BackgroundLines className="flex flex-col items-center justify-center">
+    <BackgroundLines className="flex flex-col items-center justify-center relative">
+      <div className="absolute top-16 left-20 z-20">
+        <div className="relative text-5xl dark:text-neutral-200 font-playfair h-10 w-auto flex items-center justify-start">
+          {wordsWithIcons.map((item, index) => (
+            <div
+              key={index}
+              className={`absolute flex items-center gap-2 transition-all duration-500 ease-in-out ${
+                index === currentWordIndex
+                  ? "opacity-100 blur-0"
+                  : "opacity-0 blur-sm"
+              }`}
+            >
+              {item.icon}
+              <span>{item.word}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="absolute left-[86%] top-16 z-50">
+        <Link
+          href="/work"
+          className="flex items-center text-lg font-playfair group relative"
+        >
+          <i>Side - B</i>
+          <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-purple-500 to-pink-500 transition-all duration-300 group-hover:w-full"></span>
+        </Link>
+      </div>
+
       <div className="flex items-center justify-center gap-20 w-full">
         <div className="z-50">
           <h2 className="bg-clip-text text-transparent text-left bg-gradient-to-b dark:from-neutral-400 dark:to-white text-2xl md:text-4xl lg:text-7xl font-sans md:py-2 relative font-bold tracking-tight">
             Hello, This is Vivek.
           </h2>
           <p className="max-w-xl text-xl dark:text-neutral-300 text-left font-playfair">
-            Software Developer | Full Stack Developer | Freelancer
+            Software Developer&nbsp;&nbsp;|&nbsp;&nbsp;Full Stack Developer&nbsp;&nbsp;|&nbsp;&nbsp;Freelancer
           </p>
           <div className="flex justify-start space-x-5 mt-3">
             <a
@@ -62,26 +109,34 @@ const Home = () => {
           </BackgroundGradient>
         </div>
       </div>
-      <div className="z-40 flex flex-row gap-16 dark:text-neutral-300 font-playfair text-xl mt-12">
+      <div className="z-40 flex flex-row gap-16 dark:text-neutral-300 font-playfair text-xl mt-10">
         <Link
           href="/about"
-          className="flex items-center transition-transform duration-200 hover:scale-110"
+          className="flex items-center transition-transform duration-100 hover:scale-110"
         >
           Know about me&nbsp;
           <ArrowUpRight size={17} className="ml-1" />
         </Link>
         <Link
-          href="/projects"
-          className="flex items-center transition-transform duration-200 hover:scale-110"
+          href="/work"
+          className="flex items-center transition-transform duration-100 hover:scale-110"
         >
           Projects I've worked on&nbsp;
           <ArrowUpRight size={17} className="ml-1" />
         </Link>
         <Link
           href="/skills"
-          className="flex items-center transition-transform duration-200 hover:scale-110"
+          className="flex items-center transition-transform duration-100 hover:scale-110"
         >
           My Skills&nbsp;
+          <ArrowUpRight size={17} className="ml-1" />
+        </Link>
+        <Link
+          href="https://drive.google.com/file/d/1Q9vNqBlmNf_giWy_UL3AwlIDyKNIeNn-/view?usp=sharing"
+          target="_blank"
+          className="flex items-center transition-transform duration-100 hover:scale-110"
+        >
+          Resume&nbsp;
           <ArrowUpRight size={17} className="ml-1" />
         </Link>
       </div>
