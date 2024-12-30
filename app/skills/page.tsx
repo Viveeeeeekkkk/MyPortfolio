@@ -6,7 +6,7 @@ const Skills = () => {
 
   return (
     <div className="p-6 min-h-screen">
-      <div className="absolute top-5 left-5 group">
+      <div className="fixed top-5 left-5 group">
         <div
           className="flex items-center text-white rounded-full overflow-hidden cursor-pointer 
     transition-all duration-300 group-hover:w-[270px] w-10 h-10"
