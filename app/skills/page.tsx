@@ -1,15 +1,36 @@
 "use client";
+
+import { motion } from "framer-motion";
+import React from "react";
+import { AuroraBackground } from "../../components/ui/aurora-background";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
+
+const skillsData = [
+  { name: "JavaScript", icon: "/icons/javascript.svg" },
+  { name: "TypeScript", icon: "/icons/typescript.svg" },
+  { name: "React", icon: "/icons/react.svg" },
+  { name: "Next.js", icon: "/icons/nextjs.svg" },
+  { name: "Node.js", icon: "/icons/nodejs.svg" },
+  { name: "Nest.js", icon: "/icons/nestjs.svg" },
+  { name: "MongoDB", icon: "/icons/mongodb.svg" },
+  { name: "Git", icon: "/icons/git.svg" },
+  { name: "Docker", icon: "/icons/docker.svg" },
+  { name: "AWS", icon: "/icons/aws.svg" },
+  { name: "TailwindCSS", icon: "/icons/tailwind.svg" },
+  { name: "HTML5", icon: "/icons/html.svg" },
+  { name: "C", icon: "/icons/c.svg" },
+];
+
 
 const Skills = () => {
   const router = useRouter();
 
   return (
-    <div className="p-6 min-h-screen">
+    <AuroraBackground>
       <div className="fixed top-5 left-5 group">
         <div
-          className="flex items-center text-white rounded-full overflow-hidden cursor-pointer 
-    transition-all duration-300 group-hover:w-[270px] w-10 h-10"
+          className="flex items-center text-white rounded-full overflow-hidden cursor-pointer transition-all duration-300 group-hover:w-[270px] w-10 h-10"
           style={{
             background: "linear-gradient(45deg, #6a1b9a, #d81b60)",
           }}
@@ -30,7 +51,6 @@ const Skills = () => {
               />
             </svg>
           </div>
-
           <div className="flex items-center space-x-4 opacity-0 font-playfair group-hover:opacity-100 transition-opacity duration-300 ml-2">
             <button
               onClick={() => router.push("/")}
@@ -53,12 +73,43 @@ const Skills = () => {
           </div>
         </div>
       </div>
-
-      <div className="text-center">
-        <h1 className="text-3xl font-bold">Skills</h1>
-        <p className="mt-4">These are my skills...</p>
-      </div>
-    </div>
+      <motion.div
+        initial={{ opacity: 0.0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.3,
+          duration: 0.8,
+          ease: "easeInOut",
+        }}
+        className="relative flex flex-col gap-4 items-center justify-center px-4"
+      >
+        <div className="text-3xl md:text-7xl font-bold dark:text-white text-center">
+          These are my Skills
+        </div>
+        <div className="font-extralight text-base md:text-4xl dark:text-neutral-200 py-4">
+          Here's a list of my expertise:
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mt-8">
+          {skillsData.map((skill, index) => (
+            <div
+              key={index}
+              className="flex items-center justify-start p-4 rounded-lg shadow-lg bg-gradient-to-br from-gray-600 via-gray-700 to-blue-950 text-white"
+            >
+              <div className="relative w-10 h-10 mr-4">
+                <Image
+                  src={skill.icon}
+                  alt={skill.name}
+                  layout="fill"
+                  objectFit="contain"
+                  className="rounded-md"
+                />
+              </div>
+              <span className="text-white font-medium">{skill.name}</span>
+            </div>
+          ))}
+        </div>
+      </motion.div>
+    </AuroraBackground>
   );
 };
 
