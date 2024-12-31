@@ -9,7 +9,7 @@ import instagram from "../components/assets/instagram.svg";
 import gmail from "../components/assets/gmail.svg";
 import linkedin from "../components/assets/linkedin.svg";
 import whatsapp from "../components/assets/whatsapp.svg";
-import profileVivek from "../components/assets/ProfileVivek.jpg";
+import profileVivek from '../public/vivek.jpg';
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 import { Code, Coffee, Repeat, PenTool } from "lucide-react";
 
