@@ -123,7 +123,7 @@ const About = () => {
         <p className="mt-4 font-playfair text-2xl text-neutral-200 max-w-2xl text-center mx-auto">
           There is a <i>Side - B</i> as well...
           <br/>
-          <span className="cursor-pointer underline" onClick={() => router.push("/skills")}>Here we go</span>
+          <span className="cursor-pointer underline" onClick={() => router.push("/side-b")}>Here we go</span>
         </p>
         <h1 className="mt-16 text-4xl md:text-3xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
           Send me a &#8216;Hello&#8217;

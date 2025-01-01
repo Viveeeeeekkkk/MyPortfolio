@@ -1,5 +1,8 @@
 "use client";
 import { useRouter } from "next/navigation";
+import MTJ from "../../../components/assets/MTJ.png";
+import Image from "next/image";
+
 const MyTradeJournal = () => {
   const router = useRouter();
 
@@ -29,7 +32,6 @@ const MyTradeJournal = () => {
               />
             </svg>
           </div>
-
           <div className="flex items-center space-x-4 opacity-0 font-playfair group-hover:opacity-100 transition-opacity duration-300 ml-2">
             <button
               onClick={() => router.push("/")}
@@ -58,21 +60,61 @@ const MyTradeJournal = () => {
           </div>
         </div>
       </div>
-      <h1 className="text-4xl font-bold">My Trade Journal</h1>
-      <p className="mt-4 text-lg">
-        My Trade Journal is a platform designed to help traders document and analyze their trades. It provides insights to improve decision-making and track performance.
-      </p>
-      <div className="mt-6">
-        <h2 className="text-2xl font-bold">Features:</h2>
-        <ul className="list-disc ml-6 mt-2">
-          <li>Document trade details like entry, exit, and strategy.</li>
-          <li>Generate performance reports and charts.</li>
-          <li>Analyze trends and patterns to improve strategies.</li>
-        </ul>
-      </div>
-      <div className="mt-6">
-        <h2 className="text-2xl font-bold">Technologies Used:</h2>
-        <p>React, Node.js, MongoDB, and Tailwind CSS</p>
+      <div className="py-10 px-28 font-playfair">
+        <div className="mb-8">
+          <h1 className="text-4xl">My Trade Journal</h1>
+          <div className="text-xl mt-4">What is it about?</div>
+          <p className="text-lg">
+            My Trade Journal is a platform designed to help traders document and
+            analyze their trades. It provides insights to improve
+            decision-making and track performance.
+          </p>
+        </div>
+
+        <div className="mb-8">
+          <h2 className="text-xl">Tech-Stack:</h2>
+          <ul className="list-disc ml-6 mt-2">
+            <li>React</li>
+            <li>Node.js</li>
+            <li>MongoDB</li>
+            <li>Tailwind CSS</li>
+          </ul>
+        </div>
+
+        <div className="mb-8">
+          <h2 className="text-xl">Challenges Faced:</h2>
+          <p className="mt-2">
+            While developing this project, I faced challenges such as optimizing
+            the performance of large datasets and designing an intuitive UI for
+            traders. These hurdles were overcome with efficient use of
+            pagination and user feedback.
+          </p>
+        </div>
+
+        <div className="mb-8">
+          <h2 className="text-xl">Future Enhancements:</h2>
+          <p className="mt-2">
+            I plan to add features like integration with live market data,
+            advanced filtering options for analysis, and multi-device
+            synchronization to enhance usability.
+          </p>
+        </div>
+
+        <div className="flex justify-between mt-10">
+          <button
+            onClick={() => router.push("/work/my-money")}
+            className="px-6 py-3 bg-purple-600 text-white  rounded-lg shadow-md hover:bg-purple-700 transition"
+            disabled
+          >
+            Previous Project
+          </button>
+          <button
+            onClick={() => router.push("/work/stockastix")}
+            className="px-6 py-3 bg-purple-600 text-white  rounded-lg shadow-md hover:bg-purple-700 transition"
+          >
+            Next Project
+          </button>
+        </div>
       </div>
     </div>
   );

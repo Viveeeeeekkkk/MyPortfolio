@@ -83,9 +83,9 @@ const Skills = () => {
         }}
         className="relative flex flex-col gap-4 items-center justify-center px-4"
       >
-        <div className="text-3xl md:text-7xl font-bold dark:text-white text-center">
+        <h1 className="text-4xl md:text-6xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
           These are my Skills
-        </div>
+        </h1>
         <div className="font-extralight text-base md:text-4xl dark:text-neutral-200 py-4">
           Here's a list of my expertise:
         </div>
