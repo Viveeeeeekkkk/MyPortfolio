@@ -1,7 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { useEffect, useState, useRef } from "react";
-import { BackgroundBeams } from "@/components/ui/background-beams";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import { ArrowRightFromLine, ArrowLeftFromLine } from "lucide-react";
 import myportfolio from "@/components/assets/myportfolio.png";
@@ -10,6 +9,7 @@ import instagram from "@/components/assets/instagram.svg";
 import gmail from "@/components/assets/gmail.svg";
 import linkedin from "@/components/assets/linkedin.svg";
 import whatsapp from "@/components/assets/whatsapp.svg";
+import Link from "next/link";
 
 const Portfolio = () => {
   const router = useRouter();
@@ -58,59 +58,29 @@ const Portfolio = () => {
 
   return (
     <div className="relative min-h-screen">
-      <div className="fixed top-5 left-5 group z-50">
-        <div
-          className="flex items-center text-white rounded-full overflow-hidden cursor-pointer 
-          transition-all duration-300 group-hover:w-[350px] w-10 h-10"
-          style={{
-            background: "linear-gradient(45deg, #6a1b9a, #d81b60)",
-          }}
-        >
-          <div className="flex-shrink-0 p-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 22 24"
-              strokeWidth={2}
-              stroke="currentColor"
-              className="w-5 h-5"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-          </div>
-          <div className="flex items-center space-x-4 opacity-0 font-playfair group-hover:opacity-100 transition-opacity duration-300 ml-2">
-            <button
-              onClick={() => router.push("/")}
-              className="text-[18px] px-2 py-1 rounded-md text-gray-200 hover:text-white"
-            >
+      <div className="fixed top-5 group w-full mx-auto z-50">
+        <div className="flex justify-evenly w-[22%] mx-auto border-4 p-2 rounded-full bg-black shadow-[0_0_20px_5px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_10px_rgba(255,255,255,0.5)] transition-all duration-300">
+          <Link href="/">
+            <div className="hover:bg-zinc-500 transition-all duration-300 py-1 px-3 rounded-2xl">
               Home
-            </button>
-            <button
-              onClick={() => router.push("/about")}
-              className="text-[18px] px-2 py-1 rounded-md text-gray-200 hover:text-white"
-            >
-              About
-            </button>
-            <button
-              onClick={() => router.push("/work")}
-              className="text-[18px] px-2 py-1 rounded-md text-gray-200 hover:text-white"
-            >
+            </div>
+          </Link>
+          <Link href="/about">
+            <div className="hover:bg-zinc-500 transition-all duration-300 py-1 px-3 rounded-2xl">About</div>
+          </Link>
+          <Link href="/work">
+            <div className="hover:bg-zinc-500 transition-all duration-300 py-1 px-3 rounded-2xl">
               Work
-            </button>
-            <button
-              onClick={() => router.push("/skills")}
-              className="text-[18px] px-2 py-1 rounded-md text-gray-200 hover:text-white"
-            >
+            </div>
+          </Link>
+          <Link href="/skills">
+            <div className="hover:bg-zinc-500 transition-all duration-300 py-1 px-3 rounded-2xl">
               Skills
-            </button>
-          </div>
+            </div>
+          </Link>
         </div>
       </div>
-
+      
       <div className="fixed top-[42%] right-12 z-40 text-gray-200 p-4 rounded-lg font-sans">
         <ul className="space-y-2">
           {sections.current.map((id) => (
@@ -127,7 +97,7 @@ const Portfolio = () => {
           ))}
         </ul>
       </div>
-      <div className="flex items-center justify-center min-h-screen max-w-4xl md:mt-16 mx-auto text-gray-200">
+      <div className="flex items-center justify-center min-h-screen max-w-4xl md:mt-24 mx-auto text-gray-200">
         <div className="py-10 px-28 font-playfair text-left">
           <div id="top" className="mb-16">
             <div className="mb-4 flex justify-between"><div className="text-4xl">Portfolio</div><div className="text-lg text-right self-center"><i>~ SDE, June'24 - September'24</i></div></div>
@@ -319,7 +289,6 @@ const Portfolio = () => {
           </div>
         </div>
       </div>
-      <BackgroundBeams />
     </div>
   );
 };

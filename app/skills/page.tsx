@@ -5,6 +5,7 @@ import React from "react";
 import { AuroraBackground } from "../../components/ui/aurora-background";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import Link from "next/link";
 
 const skillsData = [
   { name: "JavaScript", icon: "/icons/javascript.svg" },
@@ -28,51 +29,39 @@ const Skills = () => {
 
   return (
     <AuroraBackground>
-      <div className="fixed top-5 left-5 group">
-        <div
-          className="flex items-center text-white rounded-full overflow-hidden cursor-pointer transition-all duration-300 group-hover:w-[270px] w-10 h-10"
-          style={{
-            background: "linear-gradient(45deg, #6a1b9a, #d81b60)",
-          }}
-        >
-          <div className="flex-shrink-0 p-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 22 24"
-              strokeWidth={2}
-              stroke="currentColor"
-              className="w-5 h-5"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-          </div>
-          <div className="flex items-center space-x-4 opacity-0 font-playfair group-hover:opacity-100 transition-opacity duration-300 ml-2">
-            <button
-              onClick={() => router.push("/")}
-              className="text-[18px] px-2 py-1 rounded-md text-gray-200 hover:text-white"
-            >
+      <motion.div
+        initial={{ opacity: 0.0, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.3,
+          duration: 0.8,
+          ease: "easeInOut",
+        }}
+        className="relative flex flex-col gap-4 items-center justify-center px-4 mt-12"
+      >
+      <div className="fixed top-5 group w-[22%] mx-auto z-50">
+        <div className="flex justify-evenly text-white border-4 p-2 rounded-full bg-black shadow-[0_0_20px_5px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_10px_rgba(255,255,255,0.5)] transition-all duration-300">
+          <Link href="/">
+            <div className="hover:bg-zinc-500 transition-all duration-300 py-1 px-3 rounded-2xl">
               Home
-            </button>
-            <button
-              onClick={() => router.push("/about")}
-              className="text-[18px] px-2 py-1 rounded-md text-gray-200 hover:text-white"
-            >
-              About
-            </button>
-            <button
-              onClick={() => router.push("/work")}
-              className="text-[18px] px-2 py-1 rounded-md text-gray-200 hover:text-white"
-            >
+            </div>
+          </Link>
+          <Link href="/about">
+            <div className="hover:bg-zinc-500 transition-all duration-300 py-1 px-3 rounded-2xl">About</div>
+          </Link>
+          <Link href="/work">
+            <div className="hover:bg-zinc-500 transition-all duration-300 py-1 px-3 rounded-2xl">
               Work
-            </button>
-          </div>
+            </div>
+          </Link>
+          <Link href="/skills">
+            <div className="hover:bg-zinc-500 transition-all duration-300 py-1 px-3 rounded-2xl">
+              Skills
+            </div>
+          </Link>
         </div>
       </div>
+      </motion.div>
       <motion.div
         initial={{ opacity: 0.0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -81,7 +70,7 @@ const Skills = () => {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="relative flex flex-col gap-4 items-center justify-center px-4"
+        className="relative flex flex-col gap-4 items-center justify-center px-4 mt-12"
       >
         <h1 className="text-4xl md:text-6xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
           These are my Skills
