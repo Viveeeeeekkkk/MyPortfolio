@@ -1,5 +1,5 @@
 "use client";
-
+import { motion } from "framer-motion";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -32,6 +32,15 @@ const Home2 = () => {
 
   return (
     <>
+    <motion.div
+        initial={{ opacity: 0.0, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.2,
+          duration: 0.8,
+          ease: "easeInOut",
+        }}
+      >
       <div className="absolute top-16 left-20 z-20">
         <div className="relative text-5xl dark:text-neutral-200 font-playfair h-10 w-auto flex items-center justify-start">
           {wordsWithIcons.map((item, index) => (
@@ -110,6 +119,7 @@ const Home2 = () => {
           </BackgroundGradient>
         </div>
       </div>
+      </motion.div>
     </>
   );
 };

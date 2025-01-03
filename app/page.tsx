@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { BackgroundLines } from "@/components/ui/background-lines";
 import Image from "next/image";
@@ -33,6 +34,15 @@ const Home = () => {
   }, []);
 
   return (
+    <motion.div
+        initial={{ opacity: 0.0, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0,
+          duration: 0.4,
+          ease: "easeInOut",
+        }}
+      >
     <BackgroundLines className="flex flex-col items-center justify-center relative">
       <div className="absolute top-16 left-20 z-20">
         <div className="relative text-5xl dark:text-neutral-200 font-playfair h-10 w-auto flex items-center justify-start">
@@ -141,6 +151,7 @@ const Home = () => {
         </Link>
       </div>
     </BackgroundLines>
+    </motion.div>
   );
 };
 

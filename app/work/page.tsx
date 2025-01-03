@@ -1,5 +1,5 @@
 "use client";
-
+import { motion } from 'framer-motion';
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import React from "react";
@@ -14,6 +14,15 @@ const Projects = () => {
   const router = useRouter();
 
   return (
+    <motion.div
+        initial={{ opacity: 0.0, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.2,
+          duration: 0.8,
+          ease: "easeInOut",
+        }}
+      >
     <div className="py-5">
       <div className="fixed top-5 w-full group mx-auto z-50">
         <div className="flex w-[22%] mx-auto justify-evenly text-white border-4 p-2 rounded-full bg-black shadow-[0_0_20px_5px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_10px_rgba(255,255,255,0.5)] transition-all duration-300">
@@ -203,6 +212,7 @@ const Projects = () => {
         </div>
       </div>
     </div>
+    </motion.div>
   );
 };
 

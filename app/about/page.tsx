@@ -1,4 +1,5 @@
 "use client";
+import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { Spotlight } from "../../components/ui/Spotlight";
 import Image from "next/image";
@@ -14,24 +15,33 @@ const About = () => {
   const router = useRouter();
 
   return (
+    <motion.div
+        initial={{ opacity: 0.0, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.2,
+          duration: 0.8,
+          ease: "easeInOut",
+        }}
+      >
     <div className="min-h-screen w-full rounded-md flex md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
       <div className="fixed top-5 group w-[22%] mx-auto z-50">
         <div className="flex justify-evenly border-4 p-2 rounded-full bg-black shadow-[0_0_20px_5px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_10px_rgba(255,255,255,0.5)] transition-all duration-300">
           <Link href="/">
-            <div className="hover:bg-zinc-500 transition-all duration-300 py-1 px-3 rounded-2xl">
+            <div className="hover:bg-zinc-600 transition-all duration-300 py-1 px-3 rounded-2xl">
               Home
             </div>
           </Link>
           <Link href="/about">
-            <div className="hover:bg-zinc-500 transition-all duration-300 py-1 px-3 rounded-2xl">About</div>
+            <div className="hover:bg-zinc-600 transition-all duration-300 py-1 px-3 rounded-2xl">About</div>
           </Link>
           <Link href="/work">
-            <div className="hover:bg-zinc-500 transition-all duration-300 py-1 px-3 rounded-2xl">
+            <div className="hover:bg-zinc-600 transition-all duration-300 py-1 px-3 rounded-2xl">
               Work
             </div>
           </Link>
           <Link href="/skills">
-            <div className="hover:bg-zinc-500 transition-all duration-300 py-1 px-3 rounded-2xl">
+            <div className="hover:bg-zinc-600 transition-all duration-300 py-1 px-3 rounded-2xl">
               Skills
             </div>
           </Link>
@@ -166,6 +176,7 @@ const About = () => {
         </div>
       </div>
     </div>
+    </motion.div> 
   );
 };
 
