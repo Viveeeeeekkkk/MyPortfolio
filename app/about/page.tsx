@@ -15,15 +15,6 @@ const About = () => {
   const router = useRouter();
 
   return (
-    <motion.div
-        initial={{ opacity: 0.0, y: 0 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.2,
-          duration: 0.8,
-          ease: "easeInOut",
-        }}
-      >
     <div className="min-h-screen w-full rounded-md flex md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
       <div className="fixed top-5 group w-[22%] mx-auto z-50">
         <div className="flex justify-evenly border-4 p-2 rounded-full bg-black shadow-[0_0_20px_5px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_10px_rgba(255,255,255,0.5)] transition-all duration-300">
@@ -48,7 +39,16 @@ const About = () => {
         </div>
       </div>
       <Spotlight className="left-0 md:left-60 md:-top-10 fixed" fill="white" />
-      <div className="p-4 mt-[14%] max-w-2xl mx-auto relative z-10 w-full pt-20 md:pt-0">
+      <motion.div
+        initial={{ opacity: 0.0, y: 60 }}
+        whileInView={{ opacity: 1, y: 30 }}
+        transition={{
+          delay: 0,
+          duration: 0.7,
+          ease: "easeInOut",
+        }}
+        className="p-4 mt-[14%] max-w-2xl mx-auto relative z-10 w-full pt-20 md:pt-0"
+      >
         <h1 className="text-4xl md:text-6xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
           Who am I?
         </h1>
@@ -174,9 +174,8 @@ const About = () => {
             />
           </a>
         </div>
-      </div>
+      </motion.div> 
     </div>
-    </motion.div> 
   );
 };
 

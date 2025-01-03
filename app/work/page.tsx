@@ -14,15 +14,6 @@ const Projects = () => {
   const router = useRouter();
 
   return (
-    <motion.div
-        initial={{ opacity: 0.0, y: 0 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.2,
-          duration: 0.8,
-          ease: "easeInOut",
-        }}
-      >
     <div className="py-5">
       <div className="fixed top-5 w-full group mx-auto z-50">
         <div className="flex w-[22%] mx-auto justify-evenly text-white border-4 p-2 rounded-full bg-black shadow-[0_0_20px_5px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_10px_rgba(255,255,255,0.5)] transition-all duration-300">
@@ -48,8 +39,17 @@ const Projects = () => {
           </Link>
         </div>
       </div>
-
-      <div className="mt-20 relative w-full">
+      
+      <motion.div
+        initial={{ opacity: 0.0, y: 70 }}
+        whileInView={{ opacity: 1, y: 40 }}
+        transition={{
+          delay: 0,
+          duration: 0.7,
+          ease: "easeInOut",
+        }}
+         className="mt-20 relative w-full"
+      >
         <div className="text-center font-playfair">
           <h1 className="text-3xl">Projects</h1>
           <p className="mt-4 text-lg">Here are some of my projects...</p>
@@ -210,9 +210,8 @@ const Projects = () => {
             </CardBody>
           </CardContainer>
         </div>
-      </div>
+      </motion.div>
     </div>
-    </motion.div>
   );
 };
 

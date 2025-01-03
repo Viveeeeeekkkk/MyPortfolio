@@ -36,8 +36,8 @@ const Home2 = () => {
         initial={{ opacity: 0.0, y: 0 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
-          delay: 0.2,
-          duration: 0.8,
+          delay: 0,
+          duration: 0.4,
           ease: "easeInOut",
         }}
       >

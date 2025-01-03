@@ -29,14 +29,7 @@ const Skills = () => {
 
   return (
     <AuroraBackground>
-      <motion.div
-        initial={{ opacity: 0.0, y: 0 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.3,
-          duration: 0.8,
-          ease: "easeInOut",
-        }}
+      <div
         className="relative flex flex-col gap-4 items-center justify-center px-4 mt-12"
       >
       <div className="fixed top-5 group w-[22%] mx-auto z-50">
@@ -61,13 +54,13 @@ const Skills = () => {
           </Link>
         </div>
       </div>
-      </motion.div>
+      </div>
       <motion.div
         initial={{ opacity: 0.0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
-          delay: 0.3,
-          duration: 0.8,
+          delay: 0,
+          duration: 0.7,
           ease: "easeInOut",
         }}
         className="relative flex flex-col gap-4 items-center justify-center px-4 mt-12"
