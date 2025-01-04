@@ -71,16 +71,16 @@ const Home2 = () => {
 
       <div className="flex items-center justify-center gap-20 w-full min-h-screen">
         <div className="z-50">
-          <div className="font-sans text-xl">
-            <i>This is,</i>
+          <div className="font-sans text-xl px-2">
+            <i>And This is...</i>
           </div>
-          <h2 className="bg-clip-text text-transparent text-left bg-gradient-to-b dark:from-neutral-400 dark:to-white text-2xl md:text-4xl lg:text-7xl font-sans md:pb-2 relative font-bold tracking-tight">
+          <h2 className="px-2 bg-clip-text text-transparent text-left bg-gradient-to-b dark:from-neutral-400 dark:to-white text-2xl md:text-4xl lg:text-7xl font-sans md:pb-2 relative font-bold tracking-tight">
             <i>A Vivek Musical</i>
           </h2>
-          <p className="max-w-xl text-xl dark:text-neutral-300 text-left font-playfair">
+          <p className="px-2 max-w-xl text-xl dark:text-neutral-300 text-left font-playfair">
             Pianist&nbsp;&nbsp;|&nbsp;&nbsp;Guitarist
           </p>
-          <div className="flex justify-start space-x-5 mt-3">
+          <div className="px-2 flex justify-start space-x-5 mt-3">
             <a
               href="https://www.linkedin.com/in/sai-vivek-9a26b2201"
               target="_blank"

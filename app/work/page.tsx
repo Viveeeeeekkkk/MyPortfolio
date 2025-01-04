@@ -48,18 +48,18 @@ const Projects = () => {
           duration: 0.7,
           ease: "easeInOut",
         }}
-         className="mt-20 relative w-full"
+         className="mt-16 relative w-full"
       >
-        <div className="text-center font-playfair">
-          <h1 className="text-3xl">Projects</h1>
-          <p className="mt-4 text-lg">Here are some of my projects...</p>
+        <div className="text-center font-sans">
+          <h1 className="p-3 text-4xl md:text-6xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">Projects</h1>
+          <p className="mt-2 text-lg">Here are some of my projects...</p>
         </div>
         <div className="flex justify-evenly">
           <CardContainer className="inter-var">
-            <CardBody className="w-[600px] relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.3] border-black/[0.1] h-auto rounded-xl p-6 border">
+            <CardBody className="w-[600px] relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-zinc-900 dark:border-white/[0.3] border-black/[0.1] h-auto rounded-xl p-6 border">
               <CardItem
                 translateZ="50"
-                className="text-xl font-bold text-neutral-600 dark:text-white"
+                className="text-xl font-sans text-neutral-600 dark:text-white"
               >
                 My Trade Journal
               </CardItem>
@@ -94,10 +94,10 @@ const Projects = () => {
             </CardBody>
           </CardContainer>
           <CardContainer className="inter-var">
-            <CardBody className=" w-[600px] relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.3] border-black/[0.1] h-auto rounded-xl p-6 border">
+            <CardBody className=" w-[600px] relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-zinc-900 dark:border-white/[0.3] border-black/[0.1] h-auto rounded-xl p-6 border">
               <CardItem
                 translateZ="50"
-                className="text-xl font-bold text-neutral-600 dark:text-white"
+                className="text-xl font-sans text-neutral-600 dark:text-white"
               >
                 Stockastix
               </CardItem>
@@ -134,10 +134,10 @@ const Projects = () => {
         </div>
         <div className="flex justify-evenly">
           <CardContainer className="inter-var">
-            <CardBody className=" w-[600px] relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.3] border-black/[0.1] h-auto rounded-xl p-6 border">
+            <CardBody className=" w-[600px] relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-zinc-900 dark:border-white/[0.3] border-black/[0.1] h-auto rounded-xl p-6 border">
               <CardItem
                 translateZ="50"
-                className="text-xl font-bold text-neutral-600 dark:text-white"
+                className="text-xl font-sans text-neutral-600 dark:text-white"
               >
                 My Money
               </CardItem>
@@ -172,10 +172,10 @@ const Projects = () => {
             </CardBody>
           </CardContainer>
           <CardContainer className="inter-var">
-            <CardBody className=" w-[600px] relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.3] border-black/[0.1] h-auto rounded-xl p-6 border">
+            <CardBody className=" w-[600px] relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-zinc-900 dark:border-white/[0.3] border-black/[0.1] h-auto rounded-xl p-6 border">
               <CardItem
                 translateZ="50"
-                className="text-xl font-bold text-neutral-600 dark:text-white"
+                className="text-xl font-sans text-neutral-600 dark:text-white"
               >
                 Portfolio
               </CardItem>

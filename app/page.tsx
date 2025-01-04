@@ -75,7 +75,7 @@ const Home = () => {
       <div className="flex items-center justify-center gap-20 w-full">
         <div className="z-50">
           <h2 className="bg-clip-text text-transparent text-left bg-gradient-to-b dark:from-neutral-400 dark:to-white text-2xl md:text-4xl lg:text-7xl font-sans md:py-2 relative font-bold tracking-tight">
-            Hello, This is Vivek.
+            <i>Hello, This is Vivek</i>
           </h2>
           <p className="max-w-xl text-xl dark:text-neutral-300 text-left font-playfair">
             Software Developer&nbsp;&nbsp;|&nbsp;&nbsp;Full Stack Developer&nbsp;&nbsp;|&nbsp;&nbsp;Freelancer
