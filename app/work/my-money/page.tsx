@@ -127,51 +127,89 @@ const MyTradeJournal = () => {
                 ~ SDE, June'24 - September'24
               </div>
             </motion.div>
-            <motion.div initial={{ opacity: 0.0, y: 30 }}
+            <motion.div
+              initial={{ opacity: 0.0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{
                 delay: 0,
                 duration: 0.7,
                 ease: "easeInOut",
-              }}><Image src={mymoney} alt="mymoney" className="mt-2 w-[80%] mx-auto" /></motion.div>
+              }}
+            >
+              <Image
+                src={mymoney}
+                alt="mymoney"
+                className="mt-2 w-[80%] mx-auto"
+              />
+            </motion.div>
           </div>
 
           <div id="about" className="mb-16 max-w-6xl mx-auto">
             <h2 className="text-lg mt-16">What is it about?</h2>
             <p className="text-xl mt-2">
-              My Money is a platform designed to help traders document
-              and analyze their trades. It provides insights to improve
+              My Money is a platform designed to help traders document and
+              analyze their trades. It provides insights to improve
               decision-making and track performance.
               <br />
-              My Money is a platform designed to help traders document
-              and analyze their trades. It provides insights to improve
+              My Money is a platform designed to help traders document and
+              analyze their trades. It provides insights to improve
               decision-making and track performance.
               <br />
-              My Money is a platform designed to help traders document
-              and analyze their trades. It provides insights to improve
+              My Money is a platform designed to help traders document and
+              analyze their trades. It provides insights to improve
               decision-making and track performance.
             </p>
           </div>
 
           <div id="tech-stack" className="mb-16 max-w-6xl mx-auto">
             <h2 className="text-lg">Tech-Stack:</h2>
-            <ul className="list-disc inline-block text-left ml-6 mt-2 text-xl">
-              <li>React - For building the interactive UI.</li>
-              <li>Node.js - Backend to handle API requests.</li>
-              <li>MongoDB - Database for storing user data securely.</li>
-              <li>Tailwind CSS - For styling and responsiveness.</li>
-            </ul>
+            <div className="flex justify-evenly my-10">
+              <motion.div
+                initial={{ opacity: 0.0, x: "-300%" }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{
+                  delay: 0.2,
+                  duration: 0.7,
+                  ease: "easeInOut",
+                }}
+                className="p-10 border-4 border-zinc-600 rounded-3xl bg-zinc-600"
+              >
+                <Image
+                  src="/icons/nextjs.svg"
+                  alt="nest"
+                  width={80}
+                  height={80}
+                />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0.0, x: "-200%" }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{
+                  delay: 0,
+                  duration: 0.7,
+                  ease: "easeInOut",
+                }}
+                className="p-10 border-4 border-zinc-600 rounded-3xl bg-zinc-600"
+              >
+                <Image
+                  src="/icons/tailwind.svg"
+                  alt="nest"
+                  width={80}
+                  height={80}
+                />
+              </motion.div>
+            </div>
             <p className="text-xl">
-              My Money is a platform designed to help traders document
-              and analyze their trades. It provides insights to improve
+              My Money is a platform designed to help traders document and
+              analyze their trades. It provides insights to improve
               decision-making and track performance.
               <br />
-              My Money is a platform designed to help traders document
-              and analyze their trades. It provides insights to improve
+              My Money is a platform designed to help traders document and
+              analyze their trades. It provides insights to improve
               decision-making and track performance.
               <br />
-              My Money is a platform designed to help traders document
-              and analyze their trades. It provides insights to improve
+              My Money is a platform designed to help traders document and
+              analyze their trades. It provides insights to improve
               decision-making and track performance.
             </p>
           </div>
@@ -197,16 +235,16 @@ const MyTradeJournal = () => {
               </li>
             </ul>
             <p className="text-xl">
-              My Money is a platform designed to help traders document
-              and analyze their trades. It provides insights to improve
+              My Money is a platform designed to help traders document and
+              analyze their trades. It provides insights to improve
               decision-making and track performance.
               <br />
-              My Money is a platform designed to help traders document
-              and analyze their trades. It provides insights to improve
+              My Money is a platform designed to help traders document and
+              analyze their trades. It provides insights to improve
               decision-making and track performance.
               <br />
-              My Money is a platform designed to help traders document
-              and analyze their trades. It provides insights to improve
+              My Money is a platform designed to help traders document and
+              analyze their trades. It provides insights to improve
               decision-making and track performance.
             </p>
           </div>
@@ -223,16 +261,16 @@ const MyTradeJournal = () => {
               </li>
             </ul>
             <p className="text-xl">
-              My Money is a platform designed to help traders document
-              and analyze their trades. It provides insights to improve
+              My Money is a platform designed to help traders document and
+              analyze their trades. It provides insights to improve
               decision-making and track performance.
               <br />
-              My Money is a platform designed to help traders document
-              and analyze their trades. It provides insights to improve
+              My Money is a platform designed to help traders document and
+              analyze their trades. It provides insights to improve
               decision-making and track performance.
               <br />
-              My Money is a platform designed to help traders document
-              and analyze their trades. It provides insights to improve
+              My Money is a platform designed to help traders document and
+              analyze their trades. It provides insights to improve
               decision-making and track performance.
             </p>
           </div>
@@ -243,7 +281,11 @@ const MyTradeJournal = () => {
               as="button"
               className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
             >
-              <div onClick={() => router.push("/work/stockastix")} style={{ zIndex: "1000" }} className="text-[19px] flex">
+              <div
+                onClick={() => router.push("/work/stockastix")}
+                style={{ zIndex: "1000" }}
+                className="text-[19px] flex"
+              >
                 <ArrowLeftFromLine size={20} className="self-center" />
                 &nbsp;&nbsp;Previous Project
               </div>

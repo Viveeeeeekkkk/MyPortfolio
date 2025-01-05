@@ -155,12 +155,76 @@ const MyTradeJournal = () => {
 
           <div id="tech-stack" className="mb-16 max-w-6xl mx-auto">
             <h2 className="text-lg">Tech-Stack:</h2>
-            <ul className="list-disc inline-block text-left ml-6 mt-2 text-xl">
-              <li>React - For building the interactive UI.</li>
-              <li>Node.js - Backend to handle API requests.</li>
-              <li>MongoDB - Database for storing user data securely.</li>
-              <li>Tailwind CSS - For styling and responsiveness.</li>
-            </ul>
+            <div className="flex justify-evenly my-10">
+                          <motion.div
+                            initial={{ opacity: 0.0, x: "-200%" }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{
+                              delay: 0.7,
+                              duration: 0.7,
+                              ease: "easeInOut",
+                            }}
+                            className="p-10 border-4 border-zinc-600 rounded-3xl"
+                          >
+                            <Image
+                              src="/icons/javascript.svg"
+                              alt="nest"
+                              width={80}
+                              height={80}
+                            />
+                          </motion.div>
+                          <motion.div
+                            initial={{ opacity: 0.0, x: "-300%" }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{
+                              delay: 0.5,
+                              duration: 0.7,
+                              ease: "easeInOut",
+                            }}
+                            className="p-10 border-4 border-zinc-600 rounded-3xl"
+                          >
+                            <Image
+                              src="/icons/mongodb.svg"
+                              alt="nest"
+                              width={80}
+                              height={80}
+                            />
+                          </motion.div>
+                          <motion.div
+                            initial={{ opacity: 0.0, x: "-400%" }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{
+                              delay: 0.2,
+                              duration: 0.7,
+                              ease: "easeInOut",
+                            }}
+                            className="p-10 border-4 border-zinc-600 rounded-3xl"
+                          >
+                            <Image
+                              src="/icons/react.svg"
+                              alt="nest"
+                              width={80}
+                              height={80}
+                            />
+                          </motion.div>
+                          <motion.div
+                            initial={{ opacity: 0.0, x: "-500%" }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{
+                              delay: 0,
+                              duration: 0.7,
+                              ease: "easeInOut",
+                            }}
+                            className="p-10 border-4 border-zinc-600 rounded-3xl"
+                          >
+                            <Image
+                              src="/icons/python.svg"
+                              alt="nest"
+                              width={80}
+                              height={80}
+                            />
+                          </motion.div>
+                        </div>
             <p className="text-xl">
               Stockastix is a platform designed to help traders document
               and analyze their trades. It provides insights to improve
