@@ -1,5 +1,5 @@
 "use client";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import React from "react";
@@ -9,6 +9,10 @@ import MTJ from "../../components/assets/MTJ.png";
 import myportfolio from "../../components/assets/myportfolio.png";
 import stockastix from "../../components/assets/stockastix.png";
 import mymoney from "../../components/assets/mymoney.png";
+import instagram from "../../components/assets/instagram.svg";
+import gmail from "../../components/assets/gmail.svg";
+import linkedin from "../../components/assets/linkedin.svg";
+import whatsapp from "../../components/assets/whatsapp.svg";
 
 const Projects = () => {
   const router = useRouter();
@@ -39,7 +43,7 @@ const Projects = () => {
           </Link>
         </div>
       </div>
-      
+
       <motion.div
         initial={{ opacity: 0.0, y: 70 }}
         whileInView={{ opacity: 1, y: 40 }}
@@ -48,167 +52,180 @@ const Projects = () => {
           duration: 0.7,
           ease: "easeInOut",
         }}
-         className="mt-16 relative w-full"
+        className="mt-16 relative max-w-8xl mx-auto"
       >
-        <div className="text-center font-sans">
-          <h1 className="p-3 text-4xl md:text-6xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">Projects</h1>
-          <p className="mt-2 text-lg">Here are some of my projects...</p>
+        <div className="flex justify-center gap-16 my-12">
+          <div>
+            <CardContainer className="inter-var cursor-pointer">
+              <Link href="/work/my-trade-journal" className="block">
+                <CardBody className="w-[630px] h-[380px] relative group/card bg-gradient-to-br from-gray-700 via-zinc-800 to-zinc-950 border-2 border-gray-700 shadow-md hover:shadow-lg p-6 rounded-lg transition-all duration-300 ease-in-out">
+                  <Image
+                    src={MTJ}
+                    height="1000"
+                    width="1000"
+                    className="h-auto w-full object-cover rounded-lg group-hover/card:shadow-2xl group-hover/card:shadow-purple-500/50 transition-shadow duration-300 ease-in-out"
+                    alt="thumbnail"
+                  />
+                  <div className="flex justify-between items-center my-10">
+                    <CardItem
+                      translateZ={20}
+                      as={Link}
+                      href="https://mytradejournal.in/"
+                      target="__blank"
+                      className="px-3 py-1 rounded-lg text-sm font-medium text-white bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-indigo-500 hover:to-purple-500 shadow-lg hover:shadow-purple-500/50 transition-all duration-300 ease-in-out"
+                    >
+                      Try now →
+                    </CardItem>
+                  </div>
+                </CardBody>
+              </Link>
+            </CardContainer>
+            <div className="text-2xl mt-1 text-white">
+              My Trade Journal
+            </div>
+          </div>
+
+          <div>
+            <CardContainer className="inter-var cursor-pointer">
+              <Link href="/work/stockastix" className="block">
+                <CardBody className="w-[630px] h-[380px] relative group/card bg-gradient-to-br from-gray-700 via-zinc-800 to-zinc-900 border-2 border-gray-700 shadow-md hover:shadow-lg p-6 rounded-lg transition-all duration-300 ease-in-out">
+                  <Image
+                    src={stockastix}
+                    height="1000"
+                    width="1000"
+                    className="h-auto w-full object-cover rounded-lg group-hover/card:shadow-2xl group-hover/card:shadow-purple-500/50 transition-shadow duration-300 ease-in-out"
+                    alt="thumbnail"
+                  />
+                  <div className="flex justify-between items-center my-10">
+                    <CardItem
+                      translateZ={20}
+                      as={Link}
+                      href="https://twitter.com/mannupaaji"
+                      target="__blank"
+                      className="px-3 py-1 rounded-lg text-sm font-medium text-white bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-indigo-500 hover:to-purple-500 shadow-lg hover:shadow-purple-500/50 transition-all duration-300 ease-in-out"
+                    >
+                      Demo →
+                    </CardItem>
+                  </div>
+                </CardBody>
+              </Link>
+            </CardContainer>
+            <div className="text-2xl mt-1 text-white">
+              Stockastix
+            </div>
+          </div>
         </div>
-        <div className="flex justify-evenly">
-          <CardContainer className="inter-var">
-            <CardBody className="w-[600px] relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-zinc-900 dark:border-white/[0.3] border-black/[0.1] h-auto rounded-xl p-6 border">
-              <CardItem
-                translateZ="50"
-                className="text-xl font-sans text-neutral-600 dark:text-white"
-              >
-                My Trade Journal
-              </CardItem>
-              <CardItem translateZ="100" className="w-full mt-4">
-                <Image
-                  src={MTJ}
-                  height="1000"
-                  width="1000"
-                  className="h-60 w-full object-cover rounded-lg group-hover/card:shadow-xl"
-                  alt="thumbnail"
-                />
-              </CardItem>
-              <div className="flex justify-between items-center mt-5">
-                <CardItem
-                  translateZ={20}
-                  as={Link}
-                  href="https://mytradejournal.in/"
-                  target="__blank"
-                  className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
-                >
-                  Try now →
-                </CardItem>
-                <CardItem
-                  translateZ={20}
-                  as={Link}
-                  href="/work/my-trade-journal"
-                  className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
-                >
-                  Know more...
-                </CardItem>
-              </div>
-            </CardBody>
-          </CardContainer>
-          <CardContainer className="inter-var">
-            <CardBody className=" w-[600px] relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-zinc-900 dark:border-white/[0.3] border-black/[0.1] h-auto rounded-xl p-6 border">
-              <CardItem
-                translateZ="50"
-                className="text-xl font-sans text-neutral-600 dark:text-white"
-              >
-                Stockastix
-              </CardItem>
-              <CardItem translateZ="100" className="w-full mt-4">
-                <Image
-                  src={stockastix}
-                  height="1000"
-                  width="1000"
-                  className="h-60 w-full object-cover rounded-lg group-hover/card:shadow-xl"
-                  alt="thumbnail"
-                />
-              </CardItem>
-              <div className="flex justify-between items-center mt-5">
-                <CardItem
-                  translateZ={20}
-                  as={Link}
-                  href="https://twitter.com/mannupaaji"
-                  target="__blank"
-                  className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
-                >
-                  Demo →
-                </CardItem>
-                <CardItem
-                  translateZ={20}
-                  as={Link}
-                  href="/work/stockastix"
-                  className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
-                >
-                  Know more...
-                </CardItem>
-              </div>
-            </CardBody>
-          </CardContainer>
+        <div className="flex justify-center gap-16 my-12">
+        <div>
+            <CardContainer className="inter-var cursor-pointer">
+              <Link href="/work/my-money" className="block">
+                <CardBody className="w-[630px] h-[380px] relative group/card bg-gradient-to-br from-gray-700 via-zinc-800 to-zinc-900 border-2 border-gray-700 shadow-md hover:shadow-lg p-6 rounded-lg transition-all duration-300 ease-in-out">
+                  <Image
+                    src={mymoney}
+                    height="1000"
+                    width="1000"
+                    className="h-auto w-full object-cover rounded-lg group-hover/card:shadow-2xl group-hover/card:shadow-purple-500/50 transition-shadow duration-300 ease-in-out"
+                    alt="thumbnail"
+                  />
+                  <div className="flex justify-between items-center my-10">
+                    <CardItem
+                      translateZ={20}
+                      as={Link}
+                      href="https://twitter.com/mannupaaji"
+                      target="__blank"
+                      className="px-3 py-1 rounded-lg text-sm font-medium text-white bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-indigo-500 hover:to-purple-500 shadow-lg hover:shadow-purple-500/50 transition-all duration-300 ease-in-out"
+                    >
+                      Demo →
+                    </CardItem>
+                  </div>
+                </CardBody>
+              </Link>
+            </CardContainer>
+            <div className="text-2xl mt-1 text-white">
+              My Money
+            </div>
+          </div>
+          <div>
+            <CardContainer className="inter-var cursor-pointer">
+              <Link href="/work/portfolio" className="block">
+                <CardBody className="w-[630px] h-[380px] relative group/card bg-gradient-to-br from-gray-700 via-zinc-800 to-zinc-900 border-2 border-gray-700 shadow-md hover:shadow-lg p-6 rounded-lg transition-all duration-300 ease-in-out">
+                  <Image
+                    src={myportfolio}
+                    height="1000"
+                    width="1000"
+                    className="h-auto w-full object-cover rounded-lg group-hover/card:shadow-2xl group-hover/card:shadow-purple-500/50 transition-shadow duration-300 ease-in-out"
+                    alt="thumbnail"
+                  />
+                  <div className="flex justify-between items-center my-10">
+                    <CardItem
+                      translateZ={20}
+                      as={Link}
+                      href="/"
+                      className="px-3 py-1 rounded-lg text-sm font-medium text-white bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-indigo-500 hover:to-purple-500 shadow-lg hover:shadow-purple-500/50 transition-all duration-300 ease-in-out"
+                    >
+                      Try now →
+                    </CardItem>
+                  </div>
+                </CardBody>
+              </Link>
+            </CardContainer>
+            <div className="text-2xl mt-1 text-white">
+              Portfolio
+            </div>
+          </div>
         </div>
-        <div className="flex justify-evenly">
-          <CardContainer className="inter-var">
-            <CardBody className=" w-[600px] relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-zinc-900 dark:border-white/[0.3] border-black/[0.1] h-auto rounded-xl p-6 border">
-              <CardItem
-                translateZ="50"
-                className="text-xl font-sans text-neutral-600 dark:text-white"
-              >
-                My Money
-              </CardItem>
-              <CardItem translateZ="100" className="w-full mt-4">
-                <Image
-                  src={mymoney}
-                  height="1000"
-                  width="1000"
-                  className="h-60 w-full object-cover rounded-lg group-hover/card:shadow-xl"
-                  alt="thumbnail"
-                />
-              </CardItem>
-              <div className="flex justify-between items-center mt-5">
-                <CardItem
-                  translateZ={20}
-                  as={Link}
-                  href="https://twitter.com/mannupaaji"
-                  target="__blank"
-                  className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
-                >
-                  Demo →
-                </CardItem>
-                <CardItem
-                  translateZ={20}
-                  as={Link}
-                  href="/work/my-money"
-                  className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
-                >
-                  Know more...
-                </CardItem>
-              </div>
-            </CardBody>
-          </CardContainer>
-          <CardContainer className="inter-var">
-            <CardBody className=" w-[600px] relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-zinc-900 dark:border-white/[0.3] border-black/[0.1] h-auto rounded-xl p-6 border">
-              <CardItem
-                translateZ="50"
-                className="text-xl font-sans text-neutral-600 dark:text-white"
-              >
-                Portfolio
-              </CardItem>
-              <CardItem translateZ="100" className="w-full mt-4">
-                <Image
-                  src={myportfolio}
-                  height="1000"
-                  width="1000"
-                  className="h-60 w-full object-cover rounded-lg group-hover/card:shadow-xl"
-                  alt="thumbnail"
-                />
-              </CardItem>
-              <div className="flex justify-between items-center mt-5">
-                <CardItem
-                  translateZ={20}
-                  as={Link}
-                  href="/"
-                  className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
-                >
-                  Try now →<br />
-                  (Do not click...you might be redirected to the beginning page)
-                </CardItem>
-                <CardItem
-                  translateZ={20}
-                  as={Link}
-                  href="/work/portfolio"
-                  className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
-                >
-                  Know more...
-                </CardItem>
-              </div>
-            </CardBody>
-          </CardContainer>
+        <h1 className="mt-28 text-4xl md:text-3xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+          Send me a &#8216;Hello&#8217;
+        </h1>
+        <div className="flex justify-center space-x-5 mt-4 min-h-40">
+          <a
+            href="https://www.linkedin.com/in/sai-vivek-9a26b2201"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Image
+              src={linkedin}
+              height={25}
+              width={25}
+              alt="linkedin"
+              className="hover:scale-110"
+            />
+          </a>
+          <a
+            href="https://www.instagram.com/viveeeeeekkkk"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Image
+              src={instagram}
+              height={25}
+              width={25}
+              alt="instagram"
+              className="hover:scale-110"
+            />
+          </a>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nksaivivek@gmail.com">
+            <Image
+              src={gmail}
+              height={28}
+              width={28}
+              alt="gmail"
+              className="hover:scale-110"
+            />
+          </a>
+          <a
+            href="https://wa.me/+918465955818"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Image
+              src={whatsapp}
+              height={26}
+              width={26}
+              alt="Whatsapp"
+              className="hover:scale-110"
+            />
+          </a>
         </div>
       </motion.div>
     </div>
