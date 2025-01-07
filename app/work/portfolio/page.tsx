@@ -71,7 +71,9 @@ const MyTradeJournal = () => {
               <button
                 onClick={() => scrollToSection(id)}
                 className={` ${
-                  active === id ? "text-blue-500 scale-110" : "text-gray-400/50 hover:text-gray-300/50"
+                  active === id
+                    ? "text-blue-500 scale-110"
+                    : "text-gray-400/50 hover:text-gray-300/50"
                 } transition-transform duration-300`}
               >
                 {id.charAt(0).toUpperCase() + id.slice(1).replace("-", " ")}
@@ -118,136 +120,178 @@ const MyTradeJournal = () => {
             </motion.div>
           </div>
 
-          <div id="about" className="mb-16 max-w-6xl mx-auto">
-            <h2 className="text-lg mt-16">What is it about?</h2>
-            <p className="text-xl mt-2">
-              Portfolio is a platform designed to help traders document and
-              analyze their trades. It provides insights to improve
-              decision-making and track performance.
-              <br />
-              Portfolio is a platform designed to help traders document and
-              analyze their trades. It provides insights to improve
-              decision-making and track performance.
-              <br />
-              Portfolio is a platform designed to help traders document and
-              analyze their trades. It provides insights to improve
-              decision-making and track performance.
-            </p>
-          </div>
-
-          <div id="tech-stack" className="mb-16 max-w-6xl mx-auto">
-            <h2 className="text-lg">Tech-Stack:</h2>
-            <div className="flex justify-evenly my-10">
-              <motion.div
-                initial={{ opacity: 0.0, x: "-300%" }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{
-                  delay: 0.2,
-                  duration: 0.7,
-                  ease: "easeInOut",
-                }}
-                className="p-10 border-4 border-zinc-600 rounded-3xl bg-zinc-600"
-              >
-                <Image
-                  src="/icons/nextjs.svg"
-                  alt="nest"
-                  width={80}
-                  height={80}
-                />
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0.0, x: "-200%" }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{
-                  delay: 0,
-                  duration: 0.7,
-                  ease: "easeInOut",
-                }}
-                className="p-10 border-4 border-zinc-600 rounded-3xl bg-zinc-600"
-              >
-                <Image
-                  src="/icons/tailwind.svg"
-                  alt="nest"
-                  width={80}
-                  height={80}
-                />
-              </motion.div>
+          <motion.div
+            initial={{ opacity: 0.0, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              delay: 0,
+              duration: 0.7,
+              ease: "easeInOut",
+            }}
+          >
+            <div id="about" className="mb-16 max-w-6xl mx-auto">
+              <h2 className="text-lg mt-16">What is it about?</h2>
+              <p className="text-xl mt-2">
+                Portfolio is a platform designed to help traders document and
+                analyze their trades. It provides insights to improve
+                decision-making and track performance.
+                <br />
+                Portfolio is a platform designed to help traders document and
+                analyze their trades. It provides insights to improve
+                decision-making and track performance.
+                <br />
+                Portfolio is a platform designed to help traders document and
+                analyze their trades. It provides insights to improve
+                decision-making and track performance.
+              </p>
             </div>
-            <p className="text-xl">
-              Portfolio is a platform designed to help traders document and
-              analyze their trades. It provides insights to improve
-              decision-making and track performance.
-              <br />
-              Portfolio is a platform designed to help traders document and
-              analyze their trades. It provides insights to improve
-              decision-making and track performance.
-              <br />
-              Portfolio is a platform designed to help traders document and
-              analyze their trades. It provides insights to improve
-              decision-making and track performance.
-            </p>
-          </div>
+          </motion.div>
 
-          <div id="challenges" className="mb-16 max-w-6xl mx-auto">
-            <h2 className="text-lg">Challenges Faced:</h2>
-            <p className="mt-2 text-xl">
-              Developing this project came with challenges such as:
-            </p>
-            <ul className="list-disc inline-block text-left ml-6 mt-2 text-xl">
-              <li>
-                Optimizing the performance of large datasets for analytics.
-              </li>
-              <li>
-                Designing an intuitive UI that caters to traders of all skill
-                levels.
-              </li>
-              <li>
-                Ensuring data security and integrity for sensitive information.
-              </li>
-              <li>
-                Incorporating real-time features while maintaining scalability.
-              </li>
-            </ul>
-            <p className="text-xl">
-              Portfolio is a platform designed to help traders document and
-              analyze their trades. It provides insights to improve
-              decision-making and track performance.
-              <br />
-              Portfolio is a platform designed to help traders document and
-              analyze their trades. It provides insights to improve
-              decision-making and track performance.
-              <br />
-              Portfolio is a platform designed to help traders document and
-              analyze their trades. It provides insights to improve
-              decision-making and track performance.
-            </p>
-          </div>
+          <motion.div
+            initial={{ opacity: 0.0, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              delay: 0,
+              duration: 0.7,
+              ease: "easeInOut",
+            }}
+          >
+            <div id="tech-stack" className="mb-16 max-w-6xl mx-auto">
+              <h2 className="text-lg">Tech-Stack:</h2>
+              <div className="flex justify-evenly my-10">
+                <motion.div
+                  initial={{ opacity: 0.0, x: "-300%" }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{
+                    delay: 0.2,
+                    duration: 0.7,
+                    ease: "easeInOut",
+                  }}
+                  className="p-10 border-4 border-zinc-600 rounded-3xl bg-zinc-600"
+                >
+                  <Image
+                    src="/icons/nextjs.svg"
+                    alt="nest"
+                    width={80}
+                    height={80}
+                  />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0.0, x: "-200%" }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{
+                    delay: 0,
+                    duration: 0.7,
+                    ease: "easeInOut",
+                  }}
+                  className="p-10 border-4 border-zinc-600 rounded-3xl bg-zinc-600"
+                >
+                  <Image
+                    src="/icons/tailwind.svg"
+                    alt="nest"
+                    width={80}
+                    height={80}
+                  />
+                </motion.div>
+              </div>
+              <p className="text-xl">
+                Portfolio is a platform designed to help traders document and
+                analyze their trades. It provides insights to improve
+                decision-making and track performance.
+                <br />
+                Portfolio is a platform designed to help traders document and
+                analyze their trades. It provides insights to improve
+                decision-making and track performance.
+                <br />
+                Portfolio is a platform designed to help traders document and
+                analyze their trades. It provides insights to improve
+                decision-making and track performance.
+              </p>
+            </div>
+          </motion.div>
 
-          <div id="enhancements" className="mb-16 max-w-6xl mx-auto">
-            <h2 className="text-lg">Future Enhancements:</h2>
-            <p className="mt-2 text-xl">Planned features include:</p>
-            <ul className="list-disc inline-block text-left ml-6 mt-2 text-xl">
-              <li>
-                AI-powered insights and recommendations to enhance strategies.
-              </li>
-              <li>
-                Customizable dashboards for a personalized user experience.
-              </li>
-            </ul>
-            <p className="text-xl">
-              Portfolio is a platform designed to help traders document and
-              analyze their trades. It provides insights to improve
-              decision-making and track performance.
-              <br />
-              Portfolio is a platform designed to help traders document and
-              analyze their trades. It provides insights to improve
-              decision-making and track performance.
-              <br />
-              Portfolio is a platform designed to help traders document and
-              analyze their trades. It provides insights to improve
-              decision-making and track performance.
-            </p>
-          </div>
+          <motion.div
+            initial={{ opacity: 0.0, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              delay: 0,
+              duration: 0.7,
+              ease: "easeInOut",
+            }}
+          >
+            <div id="challenges" className="mb-16 max-w-6xl mx-auto">
+              <h2 className="text-lg">Challenges Faced:</h2>
+              <p className="mt-2 text-xl">
+                Developing this project came with challenges such as:
+              </p>
+              <ul className="list-disc inline-block text-left ml-6 mt-2 text-xl">
+                <li>
+                  Optimizing the performance of large datasets for analytics.
+                </li>
+                <li>
+                  Designing an intuitive UI that caters to traders of all skill
+                  levels.
+                </li>
+                <li>
+                  Ensuring data security and integrity for sensitive
+                  information.
+                </li>
+                <li>
+                  Incorporating real-time features while maintaining
+                  scalability.
+                </li>
+              </ul>
+              <p className="text-xl">
+                Portfolio is a platform designed to help traders document and
+                analyze their trades. It provides insights to improve
+                decision-making and track performance.
+                <br />
+                Portfolio is a platform designed to help traders document and
+                analyze their trades. It provides insights to improve
+                decision-making and track performance.
+                <br />
+                Portfolio is a platform designed to help traders document and
+                analyze their trades. It provides insights to improve
+                decision-making and track performance.
+              </p>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0.0, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              delay: 0,
+              duration: 0.7,
+              ease: "easeInOut",
+            }}
+          >
+            <div id="enhancements" className="mb-16 max-w-6xl mx-auto">
+              <h2 className="text-lg">Future Enhancements:</h2>
+              <p className="mt-2 text-xl">Planned features include:</p>
+              <ul className="list-disc inline-block text-left ml-6 mt-2 text-xl">
+                <li>
+                  AI-powered insights and recommendations to enhance strategies.
+                </li>
+                <li>
+                  Customizable dashboards for a personalized user experience.
+                </li>
+              </ul>
+              <p className="text-xl">
+                Portfolio is a platform designed to help traders document and
+                analyze their trades. It provides insights to improve
+                decision-making and track performance.
+                <br />
+                Portfolio is a platform designed to help traders document and
+                analyze their trades. It provides insights to improve
+                decision-making and track performance.
+                <br />
+                Portfolio is a platform designed to help traders document and
+                analyze their trades. It provides insights to improve
+                decision-making and track performance.
+              </p>
+            </div>
+          </motion.div>
 
           <div className="flex justify-evenly mt-10">
             <HoverBorderGradient

@@ -23,7 +23,7 @@ function Footer() {
             height={25}
             width={25}
             alt="linkedin"
-            className="hover:scale-110 transition-all duration-300"
+            className="hover:scale-125 transition-all duration-300"
           />
         </a>
         <a
@@ -37,7 +37,7 @@ function Footer() {
             height={25}
             width={25}
             alt="instagram"
-            className="hover:scale-110 transition-all duration-300"
+            className="hover:scale-125 transition-all duration-300"
           />
         </a>
         <a
@@ -46,10 +46,10 @@ function Footer() {
         >
           <Image
             src={gmail}
-            height={28}
-            width={28}
+            height={30}
+            width={30}
             alt="gmail"
-            className="hover:scale-110 transition-all duration-300"
+            className="hover:scale-125 transition-all duration-300"
           />
         </a>
         <a
@@ -63,7 +63,7 @@ function Footer() {
             height={26}
             width={26}
             alt="Whatsapp"
-            className="hover:scale-110 transition-all duration-300"
+            className="hover:scale-125 transition-all duration-300"
           />
         </a>
       </div>
