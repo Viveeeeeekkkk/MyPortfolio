@@ -9,41 +9,15 @@ import MTJ from "../../components/assets/MTJ.png";
 import myportfolio from "../../components/assets/myportfolio.png";
 import stockastix from "../../components/assets/stockastix.png";
 import mymoney from "../../components/assets/mymoney.png";
-import instagram from "../../components/assets/instagram.svg";
-import gmail from "../../components/assets/gmail.svg";
-import linkedin from "../../components/assets/linkedin.svg";
-import whatsapp from "../../components/assets/whatsapp.svg";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 
 const Projects = () => {
-  const router = useRouter();
+  const router = useRouter(); 
 
   return (
-    <div className="py-5">
-      <div className="fixed top-5 w-full group mx-auto z-50">
-        <div className="flex w-[22%] mx-auto justify-evenly text-white border-4 p-2 rounded-full bg-black shadow-[0_0_20px_5px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_10px_rgba(255,255,255,0.5)] transition-all duration-300">
-          <Link href="/">
-            <div className="hover:bg-zinc-500 transition-all duration-300 py-1 px-3 rounded-2xl">
-              Home
-            </div>
-          </Link>
-          <Link href="/about">
-            <div className="hover:bg-zinc-500 transition-all duration-300 py-1 px-3 rounded-2xl">
-              About
-            </div>
-          </Link>
-          <Link href="/work">
-            <div className="hover:bg-zinc-500 transition-all duration-300 py-1 px-3 rounded-2xl">
-              Work
-            </div>
-          </Link>
-          <Link href="/skills">
-            <div className="hover:bg-zinc-500 transition-all duration-300 py-1 px-3 rounded-2xl">
-              Skills
-            </div>
-          </Link>
-        </div>
-      </div>
-
+    <div className="w-full flex md:justify-center relative overflow-hidden">
+      <Navbar />
       <motion.div
         initial={{ opacity: 0.0, y: 70 }}
         whileInView={{ opacity: 1, y: 40 }}
@@ -72,6 +46,7 @@ const Projects = () => {
                       as={Link}
                       href="https://mytradejournal.in/"
                       target="__blank"
+                      onClick={(e: React.MouseEvent) => e.stopPropagation()}
                       className="px-3 py-1 rounded-lg text-sm font-medium text-white bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-indigo-500 hover:to-purple-500 shadow-lg hover:shadow-purple-500/50 transition-all duration-300 ease-in-out"
                     >
                       Try now →
@@ -102,6 +77,7 @@ const Projects = () => {
                       as={Link}
                       href="https://twitter.com/mannupaaji"
                       target="__blank"
+                      onClick={(e: React.MouseEvent) => e.stopPropagation()}
                       className="px-3 py-1 rounded-lg text-sm font-medium text-white bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-indigo-500 hover:to-purple-500 shadow-lg hover:shadow-purple-500/50 transition-all duration-300 ease-in-out"
                     >
                       Demo →
@@ -133,6 +109,7 @@ const Projects = () => {
                       as={Link}
                       href="https://twitter.com/mannupaaji"
                       target="__blank"
+                      onClick={(e: React.MouseEvent) => e.stopPropagation()}
                       className="px-3 py-1 rounded-lg text-sm font-medium text-white bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-indigo-500 hover:to-purple-500 shadow-lg hover:shadow-purple-500/50 transition-all duration-300 ease-in-out"
                     >
                       Demo →
@@ -161,6 +138,7 @@ const Projects = () => {
                       translateZ={20}
                       as={Link}
                       href="/"
+                      onClick={(e: React.MouseEvent) => e.stopPropagation()}
                       className="px-3 py-1 rounded-lg text-sm font-medium text-white bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-indigo-500 hover:to-purple-500 shadow-lg hover:shadow-purple-500/50 transition-all duration-300 ease-in-out"
                     >
                       Try now →
@@ -174,59 +152,7 @@ const Projects = () => {
             </div>
           </div>
         </div>
-        <h1 className="mt-28 text-4xl md:text-3xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
-          Send me a &#8216;Hello&#8217;
-        </h1>
-        <div className="flex justify-center space-x-5 mt-4 min-h-40">
-          <a
-            href="https://www.linkedin.com/in/sai-vivek-9a26b2201"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Image
-              src={linkedin}
-              height={25}
-              width={25}
-              alt="linkedin"
-              className="hover:scale-110"
-            />
-          </a>
-          <a
-            href="https://www.instagram.com/viveeeeeekkkk"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Image
-              src={instagram}
-              height={25}
-              width={25}
-              alt="instagram"
-              className="hover:scale-110"
-            />
-          </a>
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nksaivivek@gmail.com">
-            <Image
-              src={gmail}
-              height={28}
-              width={28}
-              alt="gmail"
-              className="hover:scale-110"
-            />
-          </a>
-          <a
-            href="https://wa.me/+918465955818"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Image
-              src={whatsapp}
-              height={26}
-              width={26}
-              alt="Whatsapp"
-              className="hover:scale-110"
-            />
-          </a>
-        </div>
+        <Footer />
       </motion.div>
     </div>
   );

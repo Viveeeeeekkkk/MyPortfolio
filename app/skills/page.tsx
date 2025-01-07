@@ -2,10 +2,10 @@
 
 import { motion } from "framer-motion";
 import React from "react";
-import { AuroraBackground } from "../../components/ui/aurora-background";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import Link from "next/link";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 
 const skillsData = [
   { name: "JavaScript", icon: "/icons/javascript.svg" },
@@ -23,38 +23,13 @@ const skillsData = [
   { name: "C", icon: "/icons/c.svg" },
 ];
 
-
 const Skills = () => {
   const router = useRouter();
 
   return (
-    <AuroraBackground>
-      <div
-        className="relative flex flex-col gap-4 items-center justify-center px-4 mt-12"
-      >
-      <div className="fixed top-5 group w-[22%] mx-auto z-50">
-        <div className="flex justify-evenly text-white border-4 p-2 rounded-full bg-black shadow-[0_0_20px_5px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_10px_rgba(255,255,255,0.5)] transition-all duration-300">
-          <Link href="/">
-            <div className="hover:bg-zinc-500 transition-all duration-300 py-1 px-3 rounded-2xl">
-              Home
-            </div>
-          </Link>
-          <Link href="/about">
-            <div className="hover:bg-zinc-500 transition-all duration-300 py-1 px-3 rounded-2xl">About</div>
-          </Link>
-          <Link href="/work">
-            <div className="hover:bg-zinc-500 transition-all duration-300 py-1 px-3 rounded-2xl">
-              Work
-            </div>
-          </Link>
-          <Link href="/skills">
-            <div className="hover:bg-zinc-500 transition-all duration-300 py-1 px-3 rounded-2xl">
-              Skills
-            </div>
-          </Link>
-        </div>
-      </div>
-      </div>
+    <>
+      <div className="w-full flex md:justify-center relative overflow-hidden">
+      <Navbar />
       <motion.div
         initial={{ opacity: 0.0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -63,7 +38,7 @@ const Skills = () => {
           duration: 0.7,
           ease: "easeInOut",
         }}
-        className="relative flex flex-col gap-4 items-center justify-center px-4 mt-12"
+        className="relative flex flex-col gap-4 items-center justify-center px-4 mt-28"
       >
         <h1 className="p-3 text-4xl md:text-6xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
           These are my Skills
@@ -90,8 +65,10 @@ const Skills = () => {
             </div>
           ))}
         </div>
+        <Footer />
       </motion.div>
-    </AuroraBackground>
+      </div>
+    </>
   );
 };
 

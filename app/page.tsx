@@ -124,21 +124,21 @@ const Home = () => {
           href="/about"
           className="flex items-center transition-transform duration-100 hover:scale-110"
         >
-          Know about me&nbsp;
+          About&nbsp;
           <ArrowUpRight size={17} className="ml-1" />
         </Link>
         <Link
           href="/work"
           className="flex items-center transition-transform duration-100 hover:scale-110"
         >
-          Projects I've worked on&nbsp;
+          Work&nbsp;
           <ArrowUpRight size={17} className="ml-1" />
         </Link>
         <Link
           href="/skills"
           className="flex items-center transition-transform duration-100 hover:scale-110"
         >
-          My skills&nbsp;
+          Skills&nbsp;
           <ArrowUpRight size={17} className="ml-1" />
         </Link>
         <Link
