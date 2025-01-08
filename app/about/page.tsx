@@ -23,7 +23,7 @@ const About = () => {
           duration: 0.7,
           ease: "easeInOut",
         }}
-        className="p-4 mt-[14%] max-w-2xl mx-auto relative z-10 w-full pt-20 md:pt-0"
+        className="p-4 mt-[14%] mx-auto relative z-10 w-full pt-20 md:pt-0"
       >
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
           Who am I?
@@ -45,7 +45,7 @@ const About = () => {
         <h1 className="mt-16 text-4xl sm:text-5xl md:text-6xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
           What do I like?
         </h1>
-        <div className="max-w-2xl font-playfair flex flex-col sm:flex-row justify-between mt-4 text-neutral-200">
+        <div className="max-w-2xl mx-auto font-playfair flex flex-col sm:flex-row justify-between mt-4 text-neutral-200">
           <div className="w-full sm:w-[46%] mb-4 sm:mb-0">
             <p className="text-xl sm:text-2xl">
               The{" "}

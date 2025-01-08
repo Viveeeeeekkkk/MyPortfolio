@@ -29,6 +29,7 @@ const Skills = () => {
   return (
     <>
       <div className="w-full flex md:justify-center relative overflow-hidden">
+        
       <Navbar />
       <motion.div
         initial={{ opacity: 0.0, y: 40 }}

@@ -2,7 +2,7 @@
 import { useRouter } from "next/navigation";
 import { useEffect, useState, useRef } from "react";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
-import { ArrowRightFromLine, ArrowLeftFromLine } from "lucide-react";
+import { ArrowRightFromLine, ArrowLeftFromLine, ArrowUp } from "lucide-react";
 import stockastix from "@/components/assets/stockastix.png";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -61,6 +61,7 @@ const MyTradeJournal = () => {
 
   return (
     <div className="w-full flex md:justify-center bg-gradient-to-b from-zinc-800 to-black">
+      
       <Navbar />
       <div className="fixed top-[40%] right-12 z-40 text-gray-200 p-4 rounded-lg font-sans">
         <ul className="space-y-4 text-sm">
@@ -78,6 +79,10 @@ const MyTradeJournal = () => {
             </li>
           ))}
         </ul>
+      </div>
+
+      <div className="fixed bottom-5 right-5 z-40 text-gray-200 p-4 rounded-lg font-sans">
+        <div className="rounded-full bg-zinc-800 p-2 border-2 border-gray-600 hover:scale-110 transition-all duration-200 ease-in-out cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}><ArrowUp /></div>
       </div>
 
       <div className="flex items-center justify-center min-h-screen md:pt-16 mx-auto text-gray-300">

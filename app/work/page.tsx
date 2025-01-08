@@ -13,7 +13,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 
 const Projects = () => {
-  const router = useRouter(); 
+  const router = useRouter();
 
   return (
     <div className="w-full flex md:justify-center relative overflow-hidden">
@@ -55,9 +55,7 @@ const Projects = () => {
                 </CardBody>
               </Link>
             </CardContainer>
-            <div className="text-2xl mt-1 text-white">
-              My Trade Journal
-            </div>
+            <div className="text-2xl mt-1 text-white">My Trade Journal</div>
           </div>
 
           <div>
@@ -86,13 +84,11 @@ const Projects = () => {
                 </CardBody>
               </Link>
             </CardContainer>
-            <div className="text-2xl mt-1 text-white">
-              Stockastix
-            </div>
+            <div className="text-2xl mt-1 text-white">Stockastix</div>
           </div>
         </div>
-        <div className="flex justify-center gap-16 my-12">
-        <div>
+        <div className="flex justify-center gap-16 mt-12 mb-24">
+          <div>
             <CardContainer className="inter-var cursor-pointer">
               <Link href="/work/my-money" className="block">
                 <CardBody className="w-[630px] h-[380px] relative group/card bg-gradient-to-br from-gray-700 via-zinc-800 to-zinc-900 border-2 border-gray-700 shadow-md hover:shadow-lg p-6 rounded-lg transition-all duration-300 ease-in-out">
@@ -118,9 +114,7 @@ const Projects = () => {
                 </CardBody>
               </Link>
             </CardContainer>
-            <div className="text-2xl mt-1 text-white">
-              My Money
-            </div>
+            <div className="text-2xl mt-1 text-white">My Money</div>
           </div>
           <div>
             <CardContainer className="inter-var cursor-pointer">
@@ -147,9 +141,7 @@ const Projects = () => {
                 </CardBody>
               </Link>
             </CardContainer>
-            <div className="text-2xl mt-1 text-white">
-              Portfolio
-            </div>
+            <div className="text-2xl mt-1 text-white">Portfolio</div>
           </div>
         </div>
         <Footer />

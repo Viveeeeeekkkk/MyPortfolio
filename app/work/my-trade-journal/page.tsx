@@ -2,7 +2,7 @@
 import { useRouter } from "next/navigation";
 import { useEffect, useState, useRef } from "react";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
-import { ArrowRightFromLine, ArrowLeftFromLine } from "lucide-react";
+import { ArrowRightFromLine, ArrowLeftFromLine, ArrowUp } from "lucide-react";
 import MTJ from "@/components/assets/MTJ.png";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -18,6 +18,7 @@ const MyTradeJournal = () => {
     | "tech-stack"
     | "challenges"
     | "enhancements"
+    | "project-Takeaways"
   >("top");
 
   const sections = useRef([
@@ -26,6 +27,7 @@ const MyTradeJournal = () => {
     "tech-stack",
     "challenges",
     "enhancements",
+    "project-Takeaways",
   ]);
 
   useEffect(() => {
@@ -69,7 +71,7 @@ const MyTradeJournal = () => {
     <div className="w-full flex md:justify-center bg-gradient-to-b from-zinc-800 to-black">
       <Navbar />
 
-      <div className="fixed top-[35%] right-12 z-40 text-gray-200 p-4 rounded-lg font-sans">
+      <div className="fixed top-[32%] right-12 z-40 text-gray-200 p-4 rounded-lg font-sans">
         <ul className="space-y-3 text-sm">
           <div className="text-gray-400/50 font-bold">CONTENTS</div>
           {sections.current.map((id) => (
@@ -87,6 +89,10 @@ const MyTradeJournal = () => {
             </li>
           ))}
         </ul>
+      </div>
+
+      <div className="fixed bottom-5 right-5 z-40 text-gray-200 p-4 rounded-lg font-sans">
+        <div className="rounded-full bg-zinc-800 p-2 border-2 border-gray-600 hover:scale-110 transition-all duration-200 ease-in-out cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}><ArrowUp /></div>
       </div>
 
       <div className="flex items-center justify-center min-h-screen md:pt-16 mx-auto text-gray-300">
@@ -375,6 +381,41 @@ const MyTradeJournal = () => {
             <div id="enhancements" className="m-32 max-w-5xl mx-auto">
               <h2 className="text-lg">Future Enhancements:</h2>
               <p className="mt-2 text-xl">Planned features include:</p>
+              <ul className="list-disc inline-block text-left ml-6 mt-2 text-xl">
+                <li>
+                  AI-powered insights and recommendations to enhance strategies.
+                </li>
+                <li>
+                  Customizable dashboards for a personalized user experience.
+                </li>
+              </ul>
+              <p className="text-xl">
+                My Trade Journal is a platform designed to help traders document
+                and analyze their trades. It provides insights to improve
+                decision-making and track performance.
+                <br />
+                My Trade Journal is a platform designed to help traders document
+                and analyze their trades. It provides insights to improve
+                decision-making and track performance.
+                <br />
+                My Trade Journal is a platform designed to help traders document
+                and analyze their trades. It provides insights to improve
+                decision-making and track performance.
+              </p>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0.0, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              delay: 0,
+              duration: 0.8,
+              ease: "easeInOut",
+            }}
+          >
+            <div id="project-Takeaways" className="m-32 max-w-5xl mx-auto">
+              <h2 className="text-lg">Project Takeaways:</h2>
               <ul className="list-disc inline-block text-left ml-6 mt-2 text-xl">
                 <li>
                   AI-powered insights and recommendations to enhance strategies.

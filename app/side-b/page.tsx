@@ -41,6 +41,9 @@ const Home2 = () => {
           ease: "easeInOut",
         }}
       >
+        <div className="absolute text-white text-sm bottom-5 left-12">
+      © {new Date().getFullYear()} Vivek. All Rights Reserved.
+      </div>
       <div className="absolute top-16 left-20 z-20">
         <div className="relative text-5xl dark:text-neutral-200 font-playfair h-10 w-auto flex items-center justify-start">
           {wordsWithIcons.map((item, index) => (
