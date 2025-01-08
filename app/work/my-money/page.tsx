@@ -295,7 +295,7 @@ const MyTradeJournal = () => {
             </div>
           </motion.div>
 
-          <div className="flex justify-evenly mt-10">
+          <div className="flex justify-evenly mt-10 mb-20">
             <HoverBorderGradient
               containerClassName="rounded-full"
               as="button"

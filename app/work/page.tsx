@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { CardBody, CardContainer, CardItem } from "../../components/ui/3d-card";
 import Link from "next/link";
 import MTJ from "../../components/assets/MTJ.png";
@@ -14,6 +14,7 @@ import Navbar from "@/components/Navbar";
 
 const Projects = () => {
   const router = useRouter();
+  const [isHovered, setIsHovered] = useState<boolean>(false);
 
   return (
     <div className="w-full flex md:justify-center relative overflow-hidden">
@@ -127,16 +128,35 @@ const Projects = () => {
                     className="h-auto w-full object-cover rounded-lg group-hover/card:shadow-2xl group-hover/card:shadow-purple-500/50 transition-shadow duration-300 ease-in-out"
                     alt="thumbnail"
                   />
-                  <div className="flex justify-between items-center my-10">
+                  <div className="flex justify-start items-center my-10">
                     <CardItem
                       translateZ={20}
                       as={Link}
                       href="/"
                       onClick={(e: React.MouseEvent) => e.stopPropagation()}
+                      onMouseEnter={() => setIsHovered(true)}
+                      onMouseLeave={() => setIsHovered(false)}
                       className="px-3 py-1 rounded-lg text-sm font-medium text-white bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-indigo-500 hover:to-purple-500 shadow-lg hover:shadow-purple-500/50 transition-all duration-300 ease-in-out"
                     >
                       Try now →
                     </CardItem>
+                    {isHovered && (
+                      <motion.div
+                        initial={{ opacity: 0.0, y: 0 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{
+                          delay: 0,
+                          duration: 0.4,
+                          ease: "easeInOut",
+                        }}
+                        className="text-xs mx-5"
+                      >
+                        <i>
+                          (Do not click...you might be taken back to the initial
+                          page)
+                        </i>
+                      </motion.div>
+                    )}
                   </div>
                 </CardBody>
               </Link>

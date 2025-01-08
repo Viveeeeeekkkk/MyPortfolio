@@ -61,9 +61,6 @@ const MyTradeJournal = () => {
 
   return (
     <div className="w-full flex md:justify-center bg-gradient-to-b from-zinc-800 to-black">
-      <div className="absolute text-white text-sm bottom-5 left-20">
-      © {new Date().getFullYear()} Vivek. All Rights Reserved.
-      </div>
       <Navbar />
 
       <div className="fixed top-[40%] right-12 z-40 text-gray-200 p-4 rounded-lg font-sans">
@@ -300,7 +297,7 @@ const MyTradeJournal = () => {
             </div>
           </motion.div>
 
-          <div className="flex justify-evenly mt-10">
+          <div className="flex justify-evenly mb-20 mt-10">
             <HoverBorderGradient
               containerClassName="rounded-full"
               as="button"

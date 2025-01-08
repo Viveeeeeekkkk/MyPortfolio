@@ -17,7 +17,7 @@ const About = () => {
       <Spotlight className="left-0 md:left-60 md:-top-10 fixed" fill="white" />
       <motion.div
         initial={{ opacity: 0.0, y: 60 }}
-        whileInView={{ opacity: 1, y: 30 }}
+        whileInView={{ opacity: 1, y: 25 }}
         transition={{
           delay: 0,
           duration: 0.7,
@@ -30,7 +30,7 @@ const About = () => {
         </h1>
         <p className="mt-4 font-playfair text-xl sm:text-2xl text-neutral-200 max-w-2xl text-justify mx-auto">
           <i>Vivek</i> — a 22-year-old developer with a passion for building
-          things that matter. Graduating in 2024 from MGIT [Hyderabad], was just
+          things that matter. Graduating in 2024 from MGIT [Hyderabad, India], was just
           the beginning. Since then, I’ve dived straight into freelancing as a
           Full-Stack Developer and Software Developer. Why? Because I’ve always
           been drawn to the process of creating something meaningful from

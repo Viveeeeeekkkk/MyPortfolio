@@ -125,21 +125,21 @@ const Home = () => {
       <div className="z-40 flex flex-row gap-16 dark:text-neutral-300 font-playfair text-xl mt-10">
         <Link
           href="/about"
-          className="flex items-center transition-transform duration-100 hover:scale-110"
+          className="flex items-center transition-transform duration-100 hover:scale-125"
         >
           About&nbsp;
           <ArrowUpRight size={17} className="ml-1" />
         </Link>
         <Link
           href="/work"
-          className="flex items-center transition-transform duration-100 hover:scale-110"
+          className="flex items-center transition-transform duration-100 hover:scale-125"
         >
           Work&nbsp;
           <ArrowUpRight size={17} className="ml-1" />
         </Link>
         <Link
           href="/skills"
-          className="flex items-center transition-transform duration-100 hover:scale-110"
+          className="flex items-center transition-transform duration-100 hover:scale-125"
         >
           Skills&nbsp;
           <ArrowUpRight size={17} className="ml-1" />
@@ -147,7 +147,7 @@ const Home = () => {
         <Link
           href="https://drive.google.com/file/d/1Q9vNqBlmNf_giWy_UL3AwlIDyKNIeNn-/view?usp=sharing"
           target="_blank"
-          className="flex items-center transition-transform duration-100 hover:scale-110"
+          className="flex items-center transition-transform duration-100 hover:scale-125"
         >
           Resume&nbsp;
           <ArrowUpRight size={17} className="ml-1" />

@@ -92,7 +92,12 @@ const MyTradeJournal = () => {
       </div>
 
       <div className="fixed bottom-5 right-5 z-40 text-gray-200 p-4 rounded-lg font-sans">
-        <div className="rounded-full bg-zinc-800 p-2 border-2 border-gray-600 hover:scale-110 transition-all duration-200 ease-in-out cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}><ArrowUp /></div>
+        <div
+          className="rounded-full bg-zinc-800 p-2 border-2 border-gray-600 hover:scale-110 transition-all duration-200 ease-in-out cursor-pointer"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
+          <ArrowUp />
+        </div>
       </div>
 
       <div className="flex items-center justify-center min-h-screen md:pt-16 mx-auto text-gray-300">
@@ -302,8 +307,8 @@ const MyTradeJournal = () => {
                 ))}
               </div>
               <p className="text-[17px] text-gray-300 leading-7 mt-6 text-center bg-gradient-to-r from-zinc-800 via-zinc-900 to-black p-6 rounded-lg shadow-lg border border-zinc-700">
-                <em className="text-white">My Trade Journal</em> was
-                built using a powerful tech stack. The backend leverages{" "}
+                <em className="text-white">My Trade Journal</em> was built using
+                a powerful tech stack. The backend leverages{" "}
                 <em className="text-gray-400 italic">NestJS</em> for scalable
                 APIs and is deployed on{" "}
                 <em className="text-gray-400 italic">Elastic Beanstalk</em>. The
@@ -332,39 +337,54 @@ const MyTradeJournal = () => {
             }}
           >
             <div id="challenges" className="m-32 max-w-5xl mx-auto">
-              <h2 className="text-lg">Challenges Faced:</h2>
-              <p className="mt-2 text-xl">
-                Developing this project came with challenges such as:
+              <h2 className="text-4xl font-semibold text-left text-white">
+                Challenges I Overcame
+              </h2>
+
+              <p className="mt-8 text-[17px] text-gray-300 text-center leading-7">
+                "My Trade Journal" was a journey filled with growth and
+                learning. From new technologies to complex deployments, here's
+                how I tackled the challenges that came my way:
               </p>
-              <ul className="list-disc inline-block text-left ml-6 mt-2 text-xl">
-                <li>
-                  Optimizing the performance of large datasets for analytics.
-                </li>
-                <li>
-                  Designing an intuitive UI that caters to traders of all skill
-                  levels.
-                </li>
-                <li>
-                  Ensuring data security and integrity for sensitive
-                  information.
-                </li>
-                <li>
-                  Incorporating real-time features while maintaining
-                  scalability.
-                </li>
-              </ul>
-              <p className="text-[17px]">
-                My Trade Journal is a platform designed to help traders document
-                and analyze their trades. It provides insights to improve
-                decision-making and track performance.
-                <br />
-                My Trade Journal is a platform designed to help traders document
-                and analyze their trades. It provides insights to improve
-                decision-making and track performance.
-                <br />
-                My Trade Journal is a platform designed to help traders document
-                and analyze their trades. It provides insights to improve
-                decision-making and track performance.
+
+              <div className="grid md:grid-cols-2 gap-8 mt-12">
+                <div className="p-6 rounded-lg shadow-lg bg-gradient-to-br from-zinc-700 via-zinc-800 to-black hover:scale-105 transition-all duration-300 ease-in-out">
+                  <h3 className="text-xl font-semibold text-white mb-2">
+                    💡 Mastering New Technologies
+                  </h3>
+                  <p className="text-gray-300">
+                    As my first advanced project, diving into <b>NestJS</b> was
+                    a massive challenge. Initially, I struggled with the steep
+                    learning curve and lacked confidence. However, through
+                    focused learning and tackling problems head-on, I discovered
+                    the immense power and flexibility of this framework, and
+                    grew confident in my ability to master it.
+                  </p>
+                </div>
+
+                <div className="p-6 rounded-lg shadow-lg bg-gradient-to-br from-zinc-700 via-zinc-800 to-black hover:scale-105 transition-all duration-300 ease-in-out">
+                  <h3 className="text-xl font-semibold text-white mb-2">
+                    🚀 Overcoming Deployment Complexities
+                  </h3>
+                  <p className="text-gray-300">
+                    While deploying the frontend on <b>Netlify</b> was
+                    straightforward, the real challenge came when deploying the
+                    backend on <b>AWS Elastic Beanstalk</b>. The process was
+                    more complex than expected, and I encountered several issues
+                    along the way. After consulting with experienced DevOps
+                    engineers and learning about deployment pipelines, I was
+                    able to overcome the hurdles and deploy the backend
+                    successfully.
+                  </p>
+                </div>
+              </div>
+
+              <p className="mt-12 text-[17px] text-gray-300 leading-7">
+                These challenges not only shaped my technical skills but also
+                enhanced my problem-solving abilities. Throughout the process, I
+                learned to approach each obstacle as an opportunity for growth,
+                and this project has truly molded me into a more confident and
+                capable developer.
               </p>
             </div>
           </motion.div>
@@ -440,7 +460,7 @@ const MyTradeJournal = () => {
             </div>
           </motion.div>
 
-          <div className="flex justify-evenly mt-10">
+          <div className="flex justify-evenly mb-20 mt-10">
             <HoverBorderGradient
               containerClassName="rounded-full"
               as="button"
