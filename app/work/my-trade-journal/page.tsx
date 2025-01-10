@@ -148,20 +148,20 @@ const MyTradeJournal = () => {
             >
               <div className="w-[42%] self-center">
                 <div className="font-semibold mb-4 text-white">Company</div>
-                <div className="mb-12">Shavinya Technologies, LLP</div>
+                <div className="mb-12 text-zinc-300">Shavinya Technologies, LLP</div>
                 <div className="font-semibold mb-4 text-white">Role</div>
-                <div className="mb-12">
+                <div className="mb-12 text-zinc-300">
                   Software Development Engineer —{" "}
                   <span>
                     API Design, Full-Stack Implementation, Debugging, Deployment
                   </span>
                 </div>
                 <div className="font-semibold mb-4 text-white">Duration</div>
-                <div className="mb-4">3 Months, June'24 - September'24</div>
+                <div className="mb-4 text-zinc-300">3 Months, June'24 - September'24</div>
               </div>
               <div className="w-[45%] self-center">
                 <div className="font-semibold mb-2 text-white">Overview</div>
-                <p>
+                <p className="text-zinc-300">
                   This was my first foray into advanced development—a thrilling
                   journey where I tackled backend, frontend, APIs, debugging,
                   testing, and deployment. It felt daunting initially, but it
@@ -194,15 +194,15 @@ const MyTradeJournal = () => {
             }}
           >
             <div id="what-is-it?" className="m-32 max-w-5xl mx-auto">
-              <div className="text-4xl font-semibold text-white mb-10">
+              <div className="text-4xl text-white mb-10">
                 What is it?
               </div>
-              <p className="text-[17px]">
+              <p className="text-[17px] text-zinc-300">
                 Is there a tool that can help traders stay on top of their game?
                 Absolutely!
                 <br />
                 My Trade Journal is exactly that—
-                <span className="text-green-500">
+                <span className="text-zinc-500">
                   <i>a powerful website designed to help traders</i>
                 </span>{" "}
                 track every trade, analyze their performance, and visualize
@@ -227,7 +227,7 @@ const MyTradeJournal = () => {
               <div className="mt-12 text-white text-right text-xl">
                 <i>ITS A TRADER'S TOOL!</i>
               </div>
-              <div className="mt-4 text-right text-white">
+              <div className="mt-4 text-right text-zinc-300">
                 <i>
                   Live @
                   <a href="https://mytradejournal.in" target="_blank">
@@ -251,7 +251,7 @@ const MyTradeJournal = () => {
               id="tech-stack"
               className="m-32 max-w-5xl mx-auto bg-gradient-to-r from-zinc-700 via-zinc-800 to-zinc-900 p-10 rounded-3xl shadow-xl"
             >
-              <h2 className="text-4xl font-semibold text-white text-center mb-10">
+              <h2 className="text-4xl text-white text-center mb-10">
                 Tech-Stack
               </h2>
               <div className="flex justify-evenly my-10">
@@ -337,7 +337,7 @@ const MyTradeJournal = () => {
             }}
           >
             <div id="challenges" className="m-32 max-w-5xl mx-auto">
-              <h2 className="text-4xl font-semibold text-left text-white">
+              <h2 className="text-4xl text-left text-white">
                 Challenges I Overcame
               </h2>
 
@@ -348,32 +348,29 @@ const MyTradeJournal = () => {
               </p>
 
               <div className="grid md:grid-cols-2 gap-8 mt-12">
-                <div className="p-6 rounded-lg shadow-lg bg-gradient-to-br from-zinc-700 via-zinc-800 to-black hover:scale-105 transition-all duration-300 ease-in-out">
-                  <h3 className="text-xl font-semibold text-white mb-2">
+                <div className="p-6 rounded-lg shadow-lg bg-gradient-to-br from-zinc-700 via-zinc-800 to-black">
+                  <h3 className="text-xl text-white mb-2">
                     💡 Mastering New Technologies
                   </h3>
                   <p className="text-gray-300">
                     As my first advanced project, diving into <b>NestJS</b> was
-                    a massive challenge. Initially, I struggled with the steep
-                    learning curve and lacked confidence. However, through
+                    a massive challenge. Initially, I struggled. However, through
                     focused learning and tackling problems head-on, I discovered
                     the immense power and flexibility of this framework, and
                     grew confident in my ability to master it.
                   </p>
                 </div>
 
-                <div className="p-6 rounded-lg shadow-lg bg-gradient-to-br from-zinc-700 via-zinc-800 to-black hover:scale-105 transition-all duration-300 ease-in-out">
-                  <h3 className="text-xl font-semibold text-white mb-2">
+                <div className="p-6 rounded-lg shadow-lg bg-gradient-to-br from-zinc-700 via-zinc-800 to-black">
+                  <h3 className="text-xl text-white mb-2">
                     🚀 Overcoming Deployment Complexities
                   </h3>
                   <p className="text-gray-300">
-                    While deploying the frontend on <b>Netlify</b> was
-                    straightforward, the real challenge came when deploying the
+                    The real challenge came when deploying the
                     backend on <b>AWS Elastic Beanstalk</b>. The process was
                     more complex than expected, and I encountered several issues
                     along the way. After consulting with experienced DevOps
-                    engineers and learning about deployment pipelines, I was
-                    able to overcome the hurdles and deploy the backend
+                    engineers, I was able to overcome the hurdles and deploy the backend
                     successfully.
                   </p>
                 </div>
@@ -398,32 +395,40 @@ const MyTradeJournal = () => {
               ease: "easeInOut",
             }}
           >
-            <div id="enhancements" className="m-32 max-w-5xl mx-auto">
-              <h2 className="text-lg">Future Enhancements:</h2>
-              <p className="mt-2 text-xl">Planned features include:</p>
-              <ul className="list-disc inline-block text-left ml-6 mt-2 text-xl">
-                <li>
-                  AI-powered insights and recommendations to enhance strategies.
-                </li>
-                <li>
-                  Customizable dashboards for a personalized user experience.
-                </li>
-              </ul>
-              <p className="text-xl">
-                My Trade Journal is a platform designed to help traders document
-                and analyze their trades. It provides insights to improve
-                decision-making and track performance.
-                <br />
-                My Trade Journal is a platform designed to help traders document
-                and analyze their trades. It provides insights to improve
-                decision-making and track performance.
-                <br />
-                My Trade Journal is a platform designed to help traders document
-                and analyze their trades. It provides insights to improve
-                decision-making and track performance.
-              </p>
+            <div id="enhancements" className="m-32 max-w-5xl mx-auto flex justify-between">
+              <div className="w-[40%] text-4xl text-left text-white">Future Enhancements:</div>
+              <div className="w-[50%] flex flex-col gap-10 my-4">
+                {["Smarter Strategies with AI", "Custom Dashboards", "Mobile App Coming Soon", "Seamless Integrations"].map(
+                  (title, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ scale: 1 }}
+                      whileInView={{ scale: [1, 1.15, 1] }}
+                      transition={{
+                        delay: index * 0.2, // Stagger effect
+                        duration: 0.7,
+                        ease: "easeInOut",
+                      }}
+                      className="hover:scale-105 transition-all ease-in-out duration-200"
+                    >
+                      <div className="text-lg">{title}</div>
+                      <p className="text-zinc-500">
+                        {title === "Smarter Strategies with AI" &&
+                          "We’re bringing AI into the mix! Expect powerful insights and tailored recommendations to level up your trading game."}
+                        {title === "Custom Dashboards" &&
+                          "Personalize everything! From layouts to widgets, you’ll have complete control over how your trading data looks."}
+                        {title === "Mobile App Coming Soon" &&
+                          "Track, analyze, and manage your trades on the go—because why should trading be tied to your desk?"}
+                        {title === "Seamless Integrations" &&
+                          "We’re planning to team up with popular trading platforms, so your data updates automatically. No more manual entry!"}
+                      </p>
+                    </motion.div>
+                  )
+                )}
+              </div>
             </div>
           </motion.div>
+
 
           <motion.div
             initial={{ opacity: 0.0, y: 0 }}
