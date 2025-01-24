@@ -431,39 +431,48 @@ const MyTradeJournal = () => {
 
 
           <motion.div
-            initial={{ opacity: 0.0, y: 0 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              delay: 0,
-              duration: 0.8,
-              ease: "easeInOut",
-            }}
-          >
-            <div id="project-Takeaways" className="m-32 max-w-5xl mx-auto">
-              <h2 className="text-lg">Project Takeaways:</h2>
-              <ul className="list-disc inline-block text-left ml-6 mt-2 text-xl">
-                <li>
-                  AI-powered insights and recommendations to enhance strategies.
-                </li>
-                <li>
-                  Customizable dashboards for a personalized user experience.
-                </li>
-              </ul>
-              <p className="text-xl">
-                My Trade Journal is a platform designed to help traders document
-                and analyze their trades. It provides insights to improve
-                decision-making and track performance.
-                <br />
-                My Trade Journal is a platform designed to help traders document
-                and analyze their trades. It provides insights to improve
-                decision-making and track performance.
-                <br />
-                My Trade Journal is a platform designed to help traders document
-                and analyze their trades. It provides insights to improve
-                decision-making and track performance.
-              </p>
-            </div>
-          </motion.div>
+  initial={{ opacity: 0.0, y: 0 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{
+    delay: 0,
+    duration: 0.8,
+    ease: "easeInOut",
+  }}
+>
+  <div id="project-Takeaways" className="m-32 max-w-5xl mx-auto flex justify-between">
+    <div className="w-[40%] text-4xl text-left text-white">Project Takeaways:</div>
+    <div className="w-[50%] flex flex-col gap-10 my-4">
+      {[
+        "Adaptability",
+        "Interactions with Founders and Experts",
+        "Solving Real-World Problems",
+      ].map((title, index) => (
+        <motion.div
+          key={index}
+          initial={{ scale: 1 }}
+          whileInView={{ scale: [1, 1.15, 1] }}
+          transition={{
+            delay: index * 0.2, // Stagger effect
+            duration: 0.7,
+            ease: "easeInOut",
+          }}
+          className="hover:scale-105 transition-all ease-in-out duration-200"
+        >
+          <div className="text-lg">{title}</div>
+          <p className="text-zinc-500">
+            {title === "Adaptability" &&
+              "I learned that I am adaptable. When presented with new technology, I can understand and work with it effectively, given adequate time."}
+            {title === "Interactions with Founders and Experts" &&
+              "This project gave me the opportunity to engage closely with founders and experienced professionals. These interactions enhanced my thinking and communication skills significantly."}
+            {title === "Solving Real-World Problems" &&
+              "I gained a clearer perspective on how real-world problems are approached and solved, bridging the gap between theoretical knowledge and practical implementation."}
+          </p>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</motion.div>
+
 
           <div className="flex justify-evenly mb-20 mt-10">
             <HoverBorderGradient

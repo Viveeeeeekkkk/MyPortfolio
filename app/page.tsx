@@ -65,7 +65,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="absolute left-[86%] top-16 z-50">
+      {/* <div className="absolute left-[86%] top-16 z-50">
         <Link
           href="/side-b"
           className="flex items-center text-lg font-playfair group relative"
@@ -73,7 +73,7 @@ const Home = () => {
           <i>Side - B</i>&nbsp;&nbsp;&nbsp;<ArrowRightFromLine size={17}/>
           <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-purple-500 to-pink-500 transition-all duration-300 group-hover:w-full"></span>
         </Link>
-      </div>
+      </div> */}
 
       <div className="flex items-center justify-center gap-20 w-full">
         <div className="z-50">

@@ -2,6 +2,8 @@
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { Spotlight } from "../../components/ui/Spotlight";
+import { ArrowRightFromLine } from "lucide-react";
+import Link from "next/link";
 import Image from "next/image";
 import sea from "../../components/assets/sea2.jpg";
 import me from "../../components/assets/me.jpg";
@@ -30,12 +32,13 @@ const About = () => {
         </h1>
         <p className="mt-4 font-playfair text-xl sm:text-2xl text-neutral-200 max-w-2xl text-justify mx-auto">
           <i>Vivek</i> — a 22-year-old developer with a passion for building
-          things that matter. Graduating in 2024 from MGIT [Hyderabad, India], was just
-          the beginning. Since then, I’ve dived straight into freelancing as a
-          Full-Stack Developer and Software Developer. Why? Because I’ve always
-          been drawn to the process of creating something meaningful from
-          scratch—it’s where I find my purpose. There’s something exciting about
-          taking an idea and transforming it into a functional reality. <br />
+          things that matter. Graduating in 2024 from MGIT [Hyderabad, India],
+          was just the beginning. Since then, I’ve dived straight into
+          freelancing as a Full-Stack Developer and Software Developer. Why?
+          Because I’ve always been drawn to the process of creating something
+          meaningful from scratch—it’s where I find my purpose. There’s
+          something exciting about taking an idea and transforming it into a
+          functional reality. <br />
           <br />
           Every project I take on pushes me to think differently, adapt quickly,
           and stay creative. Freelancing has been a journey of learning,
@@ -84,18 +87,20 @@ const About = () => {
             </p>
           </div>
         </div>
-        <h1 className="mt-16 text-4xl sm:text-5xl md:text-6xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+        <h1 className="mt-24 text-3xl sm:text-5xl md:text-4xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
           What else?
         </h1>
-        <p className="mt-4 font-playfair text-xl sm:text-2xl text-neutral-200 max-w-2xl text-center mx-auto">
-          There is a <i>Side - B</i> as well...
+        <p className="mb-16 mt-4 font-playfair text-2xl text-neutral-200 max-w-2xl text-center mx-auto">
+          <i>Wait...There's an other side as well...</i>
           <br />
-          <span
-            className="cursor-pointer underline"
-            onClick={() => router.push("/side-b")}
+          <Link
+            href="/side-b"
+            className="flex items-center text-2xl font-playfair group relative w-fit mx-auto my-4"
           >
-            Here we go
-          </span>
+            <i>Side - B</i>&nbsp;&nbsp;&nbsp;
+            <ArrowRightFromLine size={25} />
+            <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-purple-500 to-pink-500 transition-all duration-300 group-hover:w-full"></span>
+          </Link>
         </p>
         <Footer />
       </motion.div>
