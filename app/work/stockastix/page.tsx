@@ -340,7 +340,7 @@ const MyTradeJournal = () => {
               className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
             >
               <div
-                onClick={() => router.push("/work/my-money")}
+                onClick={() => router.push("/work/portfolio")}
                 style={{ zIndex: "1000" }}
                 className="text-[19px] flex"
               >

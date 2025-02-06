@@ -56,7 +56,10 @@ const Projects = () => {
                 </CardBody>
               </Link>
             </CardContainer>
-            <div className="text-2xl mt-1 text-white">My Trade Journal</div>
+            <div className="mt-1 text-white max-w-[620px]">
+              <div className="text-2xl font-semibold">My Trade Journal</div>
+              <div className="text-md mt-1"><i>- A tool for traders to log their trades and gain valuable insights. With analytics, charts, and personalized feedback, it helps users improve their trading strategies.</i></div>
+            </div>
           </div>
 
           <div>
@@ -85,13 +88,15 @@ const Projects = () => {
                 </CardBody>
               </Link>
             </CardContainer>
-            <div className="text-2xl mt-1 text-white">Stockastix</div>
+            <div className="mt-1 text-white max-w-[620px]">
+              <div className="text-2xl font-semibold">Stockastix</div>
+              <div className="text-md mt-1"><i>- A stock analysis platform for US markets, offering real-time data, watchlists, and advanced charting tools to analyze market trends.</i></div>
+            </div>
           </div>
         </div>
-        <div className="flex justify-center gap-16 mt-12 mb-24">
+        <div className="flex justify-center gap-16 mt-16 mb-24">
           <div>
-            <CardContainer className="inter-var cursor-pointer">
-              <Link href="/work/my-money" className="block">
+            <CardContainer className="inter-var">
                 <CardBody className="w-[630px] h-[380px] relative group/card bg-gradient-to-br from-gray-700 via-zinc-800 to-zinc-900 border-2 border-gray-700 shadow-md hover:shadow-lg p-6 rounded-lg transition-all duration-300 ease-in-out">
                   <Image
                     src={mymoney}
@@ -103,19 +108,17 @@ const Projects = () => {
                   <div className="flex justify-between items-center my-10">
                     <CardItem
                       translateZ={20}
-                      as={Link}
-                      href="https://twitter.com/mannupaaji"
-                      target="__blank"
-                      onClick={(e: React.MouseEvent) => e.stopPropagation()}
                       className="px-3 py-1 rounded-lg text-sm font-medium text-white bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-indigo-500 hover:to-purple-500 shadow-lg hover:shadow-purple-500/50 transition-all duration-300 ease-in-out"
                     >
-                      Demo →
+                      Coming Soon
                     </CardItem>
                   </div>
                 </CardBody>
-              </Link>
             </CardContainer>
-            <div className="text-2xl mt-1 text-white">My Money</div>
+            <div className="mt-1 text-white max-w-[620px]">
+            <div className="text-2xl font-semibold">My Money</div>
+            <div className="text-md mt-1"><i>- Still in the works, but it's designed to help you spot those sneaky expenses that drain your wallet. Stay tuned for a clearer, more actionable view of your financial health!</i></div>
+            </div>
           </div>
           <div>
             <CardContainer className="inter-var cursor-pointer">
@@ -160,8 +163,11 @@ const Projects = () => {
                   </div>
                 </CardBody>
               </Link>
-            </CardContainer>
-            <div className="text-2xl mt-1 text-white">Portfolio</div>
+            </CardContainer> 
+            <div className="mt-1 text-white max-w-[620px]">
+            <div className="text-2xl font-semibold">Portfolio</div>
+            <div className="text-md mt-1"><i>- Wanna explore how I built this portfolio? Dive in to see the technologies and design behind it, and get a closer look at my work in progress.</i></div>
+            </div>
           </div>
         </div>
         <Footer />

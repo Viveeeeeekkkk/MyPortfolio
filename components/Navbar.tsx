@@ -18,7 +18,7 @@ function Navbar() {
       <div className="relative flex justify-evenly text-white border-4 p-2 rounded-full bg-black shadow-[0_0_20px_5px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_10px_rgba(255,255,255,0.5)] transition-all duration-300">
         {/* Glowing indicator */}
         <div
-          className="absolute top-[-5px] h-1 w-7 rounded-full bg-white transition-all duration-300"
+          className="absolute top-[-4px] h-1 w-7 rounded-full bg-white transition-all duration-300"
           style={{
             left: hovered !== null ? leftOffsets[hovered] : leftOffsets[0],
             opacity: hovered !== null ? 1 : 0,
