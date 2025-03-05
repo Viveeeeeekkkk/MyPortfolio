@@ -5,7 +5,7 @@ import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import { ArrowRightFromLine, ArrowLeftFromLine, ArrowUp } from "lucide-react";
 import myportfolio from "@/components/assets/myportfolio.png";
 import { motion } from "framer-motion";
-import Image from "next/image";
+import Image from "next/image"; 
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 
@@ -102,9 +102,6 @@ const MyTradeJournal = () => {
             >
               <div className="py-3 text-4xl md:text-7xl font-semibold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
                 Portfolio
-              </div>
-              <div className="text-lg py-4 self-center">
-                ~ SDE, June'24 - September'24
               </div>
             </motion.div>
             <motion.div
