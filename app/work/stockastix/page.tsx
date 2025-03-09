@@ -68,7 +68,7 @@ const Stockastix = () => {
   };
 
   return (
-    <div className="w-full flex md:justify-center bg-gradient-to-b from-zinc-800 to-black">
+    <div className="w-full flex md:justify-center bg-gradient-to-b from-gray-900 to-black">
       <Navbar />
 
       <div className="fixed top-[32%] right-12 z-40 text-gray-200 p-4 rounded-lg font-sans">

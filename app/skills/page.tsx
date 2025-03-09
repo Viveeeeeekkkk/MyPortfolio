@@ -13,6 +13,7 @@ const skillsData = [
   { name: "Next.js", icon: "/icons/nextjs.svg" },
   { name: "Node.js", icon: "/icons/nodejs.svg" },
   { name: "Nest.js", icon: "/icons/nestjs.svg" },
+  { name: "Django", icon: "/icons/django.svg" },
   { name: "MongoDB", icon: "/icons/mongodb.svg" },
   { name: "Git", icon: "/icons/git.svg" },
   { name: "Docker", icon: "/icons/docker.svg" },
@@ -20,6 +21,7 @@ const skillsData = [
   { name: "TailwindCSS", icon: "/icons/tailwind.svg" },
   { name: "HTML5", icon: "/icons/html.svg" },
   { name: "C", icon: "/icons/c.svg" },
+  { name: "Python", icon: "/icons/python.svg" },
 ];
 
 const Skills = () => {
@@ -55,7 +57,14 @@ const Skills = () => {
           }}
         />
 
-        <div
+        <motion.div
+          initial={{ opacity: 0.0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{
+            delay: 0,
+            duration: 0.7,
+            ease: "easeInOut",
+          }}
           ref={textRef}
           className="fixed top-32 left-32"
           style={{
@@ -66,9 +75,16 @@ const Skills = () => {
           <div className="text-4xl font-playfair text-white transition-all duration-200 ease-in-out">
             Adaptability
           </div>
-        </div>
+        </motion.div>
 
-        <div
+        <motion.div
+          initial={{ opacity: 0.0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{
+            delay: 0,
+            duration: 0.7,
+            ease: "easeInOut",
+          }}
           ref={textRef2}
           className="fixed right-32 bottom-20"
           style={{
@@ -79,9 +95,16 @@ const Skills = () => {
           <div className="text-4xl font-playfair text-white transition-all duration-200 ease-in-out">
             Time Management
           </div>
-        </div>
+        </motion.div>
 
-        <div
+        <motion.div
+          initial={{ opacity: 0.0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{
+            delay: 0,
+            duration: 0.7,
+            ease: "easeInOut",
+          }}
           ref={textRef3}
           className="fixed left-[7%] bottom-[25%]"
           style={{
@@ -92,9 +115,16 @@ const Skills = () => {
           <div className="text-4xl font-playfair text-white transition-all duration-200 ease-in-out">
             Creativity
           </div>
-        </div>
+        </motion.div>
 
-        <div
+        <motion.div
+          initial={{ opacity: 0.0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{
+            delay: 0,
+            duration: 0.7,
+            ease: "easeInOut",
+          }}
           ref={textRef4}
           className="fixed right-[10%] top-[30%] z-50"
           style={{
@@ -105,7 +135,7 @@ const Skills = () => {
           <div className="text-4xl font-playfair text-white transition-all duration-200 ease-in-out">
             Problem Solving
           </div>
-        </div>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0.0, y: 50 }}
