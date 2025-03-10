@@ -77,12 +77,11 @@ const Projects = () => {
                     <CardItem
                       translateZ={20}
                       as={Link}
-                      href="https://twitter.com/mannupaaji"
-                      target="__blank"
+                      href="/work/stockastix"
                       onClick={(e: React.MouseEvent) => e.stopPropagation()}
                       className="px-3 py-1 rounded-lg text-sm font-medium text-white bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-indigo-500 hover:to-purple-500 shadow-lg hover:shadow-purple-500/50 transition-all duration-300 ease-in-out"
                     >
-                      Demo →
+                      Know More →
                     </CardItem>
                   </div>
                 </CardBody>

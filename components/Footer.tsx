@@ -16,7 +16,7 @@ function Footer() {
         </h1>
         <div className="flex flex-wrap justify-center space-x-5 mt-4">
           <a
-            href="https://www.linkedin.com/in/sai-vivek-9a26b2201"
+            href="https://www.linkedin.com/in/nallapati-koteswara-sai-vivek-9a26b2201/"
             target="_blank"
             rel="noreferrer"
             className="mb-4 sm:mb-0"

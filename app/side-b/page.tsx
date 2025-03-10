@@ -85,7 +85,7 @@ const Home2 = () => {
           </p>
           <div className="px-2 flex justify-start space-x-5 mt-3">
             <a
-              href="https://www.linkedin.com/in/sai-vivek-9a26b2201"
+              href="https://www.linkedin.com/in/nallapati-koteswara-sai-vivek-9a26b2201/"
               target="_blank"
               rel="noreferrer"
             >
