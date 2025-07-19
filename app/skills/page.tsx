@@ -16,11 +16,11 @@ const skillsData = [
   { name: "Django", icon: "/icons/django.svg" },
   { name: "MongoDB", icon: "/icons/mongodb.svg" },
   { name: "Git", icon: "/icons/git.svg" },
+  { name: "Postman", icon: "/icons/postman.svg" },
   { name: "Docker", icon: "/icons/docker.svg" },
   { name: "AWS", icon: "/icons/aws.svg" },
   { name: "TailwindCSS", icon: "/icons/tailwind.svg" },
   { name: "HTML5", icon: "/icons/html.svg" },
-  { name: "C", icon: "/icons/c.svg" },
   { name: "Python", icon: "/icons/python.svg" },
 ];
 
