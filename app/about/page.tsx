@@ -1,9 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { useRouter } from "next/navigation";
 import { Spotlight } from "../../components/ui/Spotlight";
-import { ArrowRightFromLine } from "lucide-react";
-import Link from "next/link";
 import Image from "next/image";
 import sea from "../../components/assets/sea2.jpg";
 import me from "../../components/assets/me.jpg";
@@ -11,46 +8,52 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 
 const About = () => {
-  const router = useRouter();
-
   return (
-    <div className="w-full flex md:justify-center relative overflow-hidden">
+    <div className="w-full flex justify-center relative overflow-hidden">
       <Navbar />
-      <Spotlight className="left-0 md:left-60 md:-top-10 fixed" fill="white" />
+
+      <Spotlight className="left-0 md:left-60 -top-10 fixed" fill="white" />
+
       <motion.div
         initial={{ opacity: 0.0, y: 60 }}
-        whileInView={{ opacity: 1, y: 25 }}
+        whileInView={{ opacity: 1, y: 0 }}
         transition={{
           delay: 0,
           duration: 0.7,
           ease: "easeInOut",
         }}
-        className="p-4 mt-[14%] mx-auto relative z-10 w-full pt-20 md:pt-0"
+        className="relative z-10 w-full max-w-5xl px-6 pt-32 pb-20"
       >
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+        <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
           Who am I?
         </h1>
-        <p className="mt-4 font-playfair text-xl sm:text-2xl text-neutral-200 max-w-2xl text-justify mx-auto">
-          <i>Vivek</i> — a 22-year-old developer with a passion for building
-          things that matter. Graduating in 2024 from MGIT [Hyderabad, India],
-          was just the beginning. Since then, I’ve dived straight into
-          freelancing as a Full-Stack Developer and Software Developer. Why?
-          Because I’ve always been drawn to the process of creating something
-          meaningful from scratch—it’s where I find my purpose. There’s
-          something exciting about taking an idea and transforming it into a
-          functional reality. <br />
+
+        <p className="mt-6 font-playfair text-base sm:text-lg md:text-xl text-neutral-200 max-w-2xl mx-auto text-left sm:text-justify leading-relaxed">
+          <i>Vivek</i> — a passionate full-stack developer who loves building
+          things that matter. I graduated in 2024 from Mahatma Gandhi Institute
+          of Technology (MGIT), Hyderabad, and quickly stepped into freelancing
+          as a Software and Full-Stack Developer.
           <br />
-          Every project I take on pushes me to think differently, adapt quickly,
-          and stay creative. Freelancing has been a journey of learning,
-          problem-solving, and connecting with people who share the same drive
-          for innovation.
+          <br />
+          I’m driven by the process of turning ideas into meaningful digital
+          experiences. From designing clean interfaces to building scalable
+          backends, I enjoy working across the stack and solving real-world
+          problems with code.
+          <br />
+          <br />
+          Every project challenges me to think better, adapt faster, and stay
+          creative. Freelancing has shaped me into a continuous learner who
+          enjoys collaborating, experimenting, and building products that create
+          impact.
         </p>
-        <h1 className="mt-16 text-4xl sm:text-5xl md:text-6xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+
+        <h1 className="mt-20 text-2xl sm:text-3xl md:text-5xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
           What do I like?
         </h1>
-        <div className="max-w-2xl mx-auto font-playfair flex flex-col sm:flex-row justify-between mt-4 text-neutral-200">
-          <div className="w-full sm:w-[46%] mb-4 sm:mb-0">
-            <p className="text-xl sm:text-2xl">
+
+        <div className="max-w-2xl mx-auto font-playfair flex flex-col md:flex-row gap-12 mt-10 text-neutral-200">
+          <div className="w-full md:w-1/2 flex flex-col">
+            <p className="text-base sm:text-lg md:text-xl leading-relaxed">
               The{" "}
               <i>
                 <q>Sea</q>
@@ -61,21 +64,26 @@ const About = () => {
               ocean whispers stories of its timeless journey. It’s my ultimate
               escape and source of inspiration.
             </p>
-            <br />
-            <Image
-              src={me}
-              alt="sea"
-              className="rounded-xl shadow-lg h-auto object-cover hover:scale-105 transition-all duration-200 ease-in-out"
-            />
+
+            <div className="mt-6">
+              <Image
+                src={me}
+                alt="Vivek"
+                className="rounded-xl shadow-lg w-full h-auto object-cover hover:scale-105 transition-all duration-300 ease-in-out"
+              />
+            </div>
           </div>
-          <div className="w-full sm:w-[46%]">
-            <Image
-              src={sea}
-              alt="me"
-              className="rounded-xl shadow-lg h-auto object-cover hover:scale-105 transition-all duration-200 ease-in-out"
-            />
-            <br />
-            <p className="text-xl sm:text-2xl">
+
+          <div className="w-full md:w-1/2 flex flex-col-reverse md:flex-col">
+            <div className="mb-6">
+              <Image
+                src={sea}
+                alt="Sea"
+                className="rounded-xl shadow-lg w-full h-auto object-cover hover:scale-105 transition-all duration-300 ease-in-out"
+              />
+            </div>
+
+            <p className="text-base sm:text-lg md:text-xl leading-relaxed">
               <i>
                 <q>Traveling</q>
               </i>{" "}
@@ -87,22 +95,10 @@ const About = () => {
             </p>
           </div>
         </div>
-        <h1 className="mt-24 text-3xl sm:text-5xl md:text-4xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
-          What else?
-        </h1>
-        <p className="mb-16 mt-4 font-playfair text-2xl text-neutral-200 max-w-2xl text-center mx-auto">
-          <i>Wait...There's an other side as well...</i>
-          <br />
-          <Link
-            href="/side-b"
-            className="flex items-center text-2xl font-playfair group relative w-fit mx-auto my-4"
-          >
-            <i>Side - B</i>&nbsp;&nbsp;&nbsp;
-            <ArrowRightFromLine size={25} />
-            <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-purple-500 to-pink-500 transition-all duration-300 group-hover:w-full"></span>
-          </Link>
-        </p>
-        <Footer />
+
+        <div className="mt-24">
+          <Footer />
+        </div>
       </motion.div>
     </div>
   );

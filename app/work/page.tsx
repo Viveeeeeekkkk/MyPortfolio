@@ -1,196 +1,173 @@
 "use client";
+
 import { motion } from "framer-motion";
-import { useRouter } from "next/navigation";
 import Image from "next/image";
-import React, { useState } from "react";
-import { CardBody, CardContainer, CardItem } from "../../components/ui/3d-card";
 import Link from "next/link";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+
 import MTJ from "../../components/assets/MTJ.png";
 import myportfolio from "../../components/assets/myportfolio.png";
 import stockastix from "../../components/assets/stockastix.png";
-import mymoney from "../../components/assets/mymoney.png";
-import moneynut from "../../components/assets/moneynut.jpg";
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
+import moneynut from "../../components/assets/moneynut.png";
+import npmicon from "../../components/assets/npmicon.png";
 
-const Projects = () => {
-  const router = useRouter();
-  const [isHovered, setIsHovered] = useState<boolean>(false);
+const projects = [
+  {
+    title: "MoneyNut",
+    image: moneynut,
+    description:
+      "An expense tracking app designed to help users monitor spending habits and gain better financial control.",
+    tech: [
+      "React Native",
+      "Nest.js",
+      "DynamoDB",
+      "AWS",
+      "Git",
+      "Expo",
+      "Postman",
+    ],
+    status: "Ready Demo",
+    link: null,
+    external: false,
+  },
+  {
+    title: "Stockastix",
+    image: stockastix,
+    description:
+      "A stock analysis platform for US markets with real-time data, watchlists, and advanced charting tools.",
+    tech: [
+      "React",
+      "Redux",
+      "Django",
+      "PostgreSQL",
+      "AWS EC2",
+      "Cron Jobs",
+      "Postman",
+      "Git",
+    ],
+    status: "Live",
+    link: "https://github.com/Viveeeeeekkkk/Stockastix-Case-Study",
+    external: true,
+  },
+  {
+    title: "My Trade Journal",
+    image: MTJ,
+    description:
+      "A journaling tool for traders with analytics, performance tracking, and personalized insights.",
+    tech: ["Nest.js", "Typescript", "React", "AWS", "DynamoDB"],
+    status: "Live",
+    link: "/work/my-trade-journal",
+    external: false,
+  },
+  {
+    title: "Portfolio",
+    image: myportfolio,
+    description:
+      "This very portfolio — built to showcase my projects, skills, and design approach.",
+    tech: ["Next.js", "Tailwind", "Shadcn", "Vercel", "Git"],
+    status: "Live",
+    link: "/",
+    external: false,
+  },
+  {
+    title: "roast-a-dev",
+    image: npmicon,
+    description:
+      "An open-source CLI tool that generates fun developer roasts. Published as an NPM package with category filters and fully offline support.",
+    tech: ["Node.js", "JavaScript", "NPM", "CLI"],
+    status: "Live",
+    link: "https://www.npmjs.com/package/roast-a-dev",
+    external: true,
+  },
+];
 
+export default function Projects() {
   return (
-    <div className="w-full flex md:justify-center relative overflow-hidden">
+    <div className="w-full min-h-screen bg-zinc-950 text-white">
       <Navbar />
+
       <motion.div
-        initial={{ opacity: 0.0, y: 70 }}
-        whileInView={{ opacity: 1, y: 40 }}
-        transition={{
-          delay: 0,
-          duration: 0.7,
-          ease: "easeInOut",
-        }}
-        className="mt-16 relative max-w-8xl mx-auto"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="max-w-6xl mx-auto px-6 pt-32"
       >
-        <div className="flex justify-center gap-16 my-12">
-          <div><CardContainer className="inter-var">
-              <CardBody className="w-[630px] h-[380px] relative group/card bg-gradient-to-br from-gray-700 via-zinc-800 to-zinc-900 border-2 border-gray-700 shadow-md hover:shadow-lg p-6 rounded-lg transition-all duration-300 ease-in-out">
+        <div className="mb-12 text-center">
+          <div className="text-3xl">Collection of My Work</div>
+          <p className="mt-3 text-neutral-400">
+            A selection of products and applications I’ve built and worked on.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="flex flex-col bg-gradient-to-br from-zinc-900 via-zinc-900 to-zinc-800 border border-zinc-700/70 rounded-xl shadow-md shadow-black/40 ring-1 ring-white/5 hover:shadow-black/70 hover:-translate-y-1 transition-all duration-300 overflow-hidden"
+            >
+              <div className="w-full h-56 bg-[#E6E1F5] flex items-center justify-center">
                 <Image
-                  src={moneynut}
-                  height="1000"
-                  width="1000"
-                  className="h-auto w-full object-cover rounded-lg group-hover/card:shadow-2xl group-hover/card:shadow-purple-500/50 transition-shadow duration-300 ease-in-out"
-                  alt="thumbnail"
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-contain p-6 hover:scale-110 transition-transform duration-300"
                 />
-                <div className="flex justify-between items-center my-10">
-                  <CardItem
-                    translateZ={20}
-                    className="px-3 py-1 rounded-lg text-sm font-medium text-white bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-indigo-500 hover:to-purple-500 shadow-lg hover:shadow-purple-500/50 transition-all duration-300 ease-in-out"
+              </div>
+
+              <div className="flex-1 p-5 flex flex-col">
+                <div className="flex justify-between items-center">
+                  <h2 className="text-2xl">{project.title}</h2>
+                  <span
+                    className={`text-xs px-3 py-1 rounded-full ${
+                      project.status !== "Live"
+                        ? "bg-yellow-500/20 text-yellow-400"
+                        : "bg-green-500/20 text-green-400"
+                    }`}
                   >
-                    Coming Soon
-                  </CardItem>
+                    {project.status}
+                  </span>
                 </div>
-              </CardBody>
-            </CardContainer>
-            <div className="mt-1 text-white max-w-[620px]">
-              <div className="text-2xl font-semibold">MoneyNut</div>
-              <div className="text-md mt-1">
-                <i>
-                  - Still in the works, but it's designed to help you spot those
-                  sneaky expenses that drain your wallet. Stay tuned for a
-                  clearer, more actionable view of your financial health!
-                </i>
-              </div>
-            </div></div>
 
-          <div>
-            <CardContainer className="inter-var cursor-pointer">
-              <Link href="/work/stockastix" className="block">
-                <CardBody className="w-[630px] h-[380px] relative group/card bg-gradient-to-br from-gray-700 via-zinc-800 to-zinc-900 border-2 border-gray-700 shadow-md hover:shadow-lg p-6 rounded-lg transition-all duration-300 ease-in-out">
-                  <Image
-                    src={stockastix}
-                    height="1000"
-                    width="1000"
-                    className="h-auto w-full object-cover rounded-lg group-hover/card:shadow-2xl group-hover/card:shadow-purple-500/50 transition-shadow duration-300 ease-in-out"
-                    alt="thumbnail"
-                  />
-                  <div className="flex justify-between items-center my-10">
-                    <CardItem
-                      translateZ={20}
-                      as={Link}
-                      href="/work/stockastix"
-                      onClick={(e: React.MouseEvent) => e.stopPropagation()}
-                      className="px-3 py-1 rounded-lg text-sm font-medium text-white bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-indigo-500 hover:to-purple-500 shadow-lg hover:shadow-purple-500/50 transition-all duration-300 ease-in-out"
-                    >
-                      Know More →
-                    </CardItem>
-                  </div>
-                </CardBody>
-              </Link>
-            </CardContainer>
-            <div className="mt-1 text-white max-w-[620px]">
-              <div className="text-2xl font-semibold">Stockastix</div>
-              <div className="text-md mt-1">
-                <i>
-                  - A stock analysis platform for US markets, offering real-time
-                  data, watchlists, and advanced charting tools to analyze
-                  market trends.
-                </i>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="flex justify-center gap-16 mt-16 mb-24">
-          <div>
+                <p className="mt-3 text-sm text-neutral-300 leading-relaxed flex-1">
+                  {project.description}
+                </p>
 
-            <CardContainer className="inter-var cursor-pointer">
-              <Link href="/work/my-trade-journal" className="block">
-                <CardBody className="w-[630px] h-[380px] relative group/card bg-gradient-to-br from-gray-700 via-zinc-800 to-zinc-950 border-2 border-gray-700 shadow-md hover:shadow-lg p-6 rounded-lg transition-all duration-300 ease-in-out">
-                  <Image
-                    src={MTJ}
-                    height="1000"
-                    width="1000"
-                    className="h-auto w-full object-cover rounded-lg group-hover/card:shadow-2xl group-hover/card:shadow-purple-500/50 transition-shadow duration-300 ease-in-out"
-                    alt="thumbnail"
-                  />
-                  <div className="flex justify-between items-center my-10">
-                    <CardItem
-                      translateZ={20}
-                      as={Link}
-                      href="https://mytradejournal.in/"
-                      target="__blank"
-                      onClick={(e: React.MouseEvent) => e.stopPropagation()}
-                      className="px-3 py-1 rounded-lg text-sm font-medium text-white bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-indigo-500 hover:to-purple-500 shadow-lg hover:shadow-purple-500/50 transition-all duration-300 ease-in-out"
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {project.tech.map((tech, idx) => (
+                    <span
+                      key={idx}
+                      className="text-xs px-3 py-1 rounded-2xl bg-zinc-800 border border-zinc-700"
                     >
-                      Try now →
-                    </CardItem>
-                  </div>
-                </CardBody>
-              </Link>
-            </CardContainer>
-            <div className="mt-1 text-white max-w-[620px]">
-              <div className="text-2xl font-semibold">My Trade Journal</div>
-              <div className="text-md mt-1"><i>- A tool for traders to log their trades and gain valuable insights. With analytics, charts, and personalized feedback, it helps users improve their trading strategies.</i></div>
-            </div>
-          </div>
-          <div>
-            <CardContainer className="inter-var cursor-pointer">
-              <Link href="/work/portfolio" className="block">
-                <CardBody className="w-[630px] h-[380px] relative group/card bg-gradient-to-br from-gray-700 via-zinc-800 to-zinc-900 border-2 border-gray-700 shadow-md hover:shadow-lg p-6 rounded-lg transition-all duration-300 ease-in-out">
-                  <Image
-                    src={myportfolio}
-                    height="1000"
-                    width="1000"
-                    className="h-auto w-full object-cover rounded-lg group-hover/card:shadow-2xl group-hover/card:shadow-purple-500/50 transition-shadow duration-300 ease-in-out"
-                    alt="thumbnail"
-                  />
-                  <div className="flex justify-start items-center my-10">
-                    <CardItem
-                      translateZ={20}
-                      as={Link}
-                      href="/"
-                      onClick={(e: React.MouseEvent) => e.stopPropagation()}
-                      onMouseEnter={() => setIsHovered(true)}
-                      onMouseLeave={() => setIsHovered(false)}
-                      className="px-3 py-1 rounded-lg text-sm font-medium text-white bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-indigo-500 hover:to-purple-500 shadow-lg hover:shadow-purple-500/50 transition-all duration-300 ease-in-out"
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Actions */}
+                <div className="mt-6 flex gap-4">
+                  {project.link ? (
+                    <Link
+                      href={project.link}
+                      target={project.external ? "_blank" : "_self"}
+                      className="px-4 py-2 text-sm rounded-xl bg-white text-black hover:bg-neutral-200 transition"
                     >
-                      Try now →
-                    </CardItem>
-                    {isHovered && (
-                      <motion.div
-                        initial={{ opacity: 0.0, y: 0 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{
-                          delay: 0,
-                          duration: 0.4,
-                          ease: "easeInOut",
-                        }}
-                        className="text-xs mx-5"
-                      >
-                        <i>
-                          (Do not click...you might be taken back to the initial
-                          page)
-                        </i>
-                      </motion.div>
-                    )}
-                  </div>
-                </CardBody>
-              </Link>
-            </CardContainer>
-            <div className="mt-1 text-white max-w-[620px]">
-              <div className="text-2xl font-semibold">Portfolio</div>
-              <div className="text-md mt-1">
-                <i>
-                  - Wanna explore how I built this portfolio? Dive in to see the
-                  technologies and design behind it, and get a closer look at my
-                  work in progress.
-                </i>
+                      View Project →
+                    </Link>
+                  ) : (
+                    <span className="px-4 py-2 text-sm rounded-lg bg-zinc-800 text-neutral-400 cursor-not-allowed">
+                      Coming Soon
+                    </span>
+                  )}
+                </div>
               </div>
             </div>
-          </div>
+          ))}
         </div>
-        <Footer />
+
+        <div className="mt-24">
+          <Footer />
+        </div>
       </motion.div>
     </div>
   );
-};
-
-export default Projects;
+}

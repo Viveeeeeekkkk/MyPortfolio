@@ -1,36 +1,76 @@
-import Link from 'next/link';
-import React, { useState } from 'react';
+import Link from "next/link";
+import React, { useState, useRef } from "react";
 
 function Navbar() {
-  const [hovered, setHovered] = useState<number | null>(null);
+  const [indicatorStyle, setIndicatorStyle] = useState({
+    left: 0,
+    width: 0,
+    opacity: 0,
+  });
+
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const links = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Work', href: '/work' },
-    { name: 'Skills', href: '/skills' },
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Work", href: "/work" },
   ];
 
-  const leftOffsets = ['11.7%', '35.3%', '58.3%', '80.5%']; 
+  const handleHover = (e: React.MouseEvent<HTMLDivElement>) => {
+    const target = e.currentTarget;
+    const containerLeft =
+      containerRef.current?.getBoundingClientRect().left || 0;
+
+    const { left, width } = target.getBoundingClientRect();
+
+    setIndicatorStyle({
+      left: left - containerLeft + width / 2 - 12,
+      width: 22,
+      opacity: 1,
+    });
+  };
+
+  const handleLeave = () => {
+    setIndicatorStyle((prev) => ({
+      ...prev,
+      opacity: 0,
+    }));
+  };
 
   return (
-    <div className="fixed top-5 group w-full sm:w-[22%] mx-auto z-50">
-      <div className="relative flex justify-evenly text-white border-4 p-2 rounded-full bg-black shadow-[0_0_20px_5px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_10px_rgba(255,255,255,0.5)] transition-all duration-300">
+    <div className="fixed top-5 w-full flex justify-center z-50 px-4">
+      <div
+        ref={containerRef}
+        onMouseLeave={handleLeave}
+        className="
+          relative flex gap-4 sm:gap-8 text-white
+          px-2 py-2 rounded-full
+          bg-white/10 backdrop-blur-md
+          border border-white/20
+          shadow-[0_0_20px_5px_rgba(255,255,255,0.15)]
+          hover:shadow-[0_0_30px_10px_rgba(255,255,255,0.25)]
+          transition-all duration-300
+        "
+      >
         {/* Glowing indicator */}
         <div
-          className="absolute top-[-4px] h-1 w-7 rounded-full bg-white transition-all duration-300"
+          className="absolute top-[-4px] h-1 rounded-full bg-white transition-all duration-300"
           style={{
-            left: hovered !== null ? leftOffsets[hovered] : leftOffsets[0],
-            opacity: hovered !== null ? 1 : 0,
+            left: indicatorStyle.left,
+            width: indicatorStyle.width,
+            opacity: indicatorStyle.opacity,
           }}
-        ></div>
+        />
 
         {links.map((link, index) => (
           <Link href={link.href} key={index}>
             <div
-              className="py-1 px-3 rounded-2xl hover:bg-gradient-to-b from-zinc-500 to-zinc-600/50 transition-all duration-700"
-              onMouseEnter={() => setHovered(index)}
-              onMouseLeave={() => setHovered(null)}
+              className="
+                py-1 px-4 rounded-2xl cursor-pointer
+                hover:bg-white/20
+                transition-all duration-300
+              "
+              onMouseEnter={handleHover}
             >
               {link.name}
             </div>
@@ -42,48 +82,3 @@ function Navbar() {
 }
 
 export default Navbar;
-
-
-// import Link from 'next/link';
-// import React, { useState } from 'react';
-
-// function Navbar() {
-//   const [hovered, setHovered] = useState<number | null>(null); 
-
-//   const links = [
-//     { name: 'Home', href: '/' },
-//     { name: 'About', href: '/about' },
-//     { name: 'Work', href: '/work' },
-//   ];
-
-//   const leftOffsets = ['17%', '46.5%', '74.5%']; 
-
-//   return (
-//     <div className="fixed top-5 group w-full sm:w-[22%] mx-auto z-50">
-//       <div className="relative flex justify-evenly text-white border-4 p-2 rounded-full bg-black shadow-[0_0_20px_5px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_10px_rgba(255,255,255,0.5)] transition-all duration-300">
-//         <div
-//           className="absolute top-[-5px] h-1 w-7 rounded-full bg-white transition-all duration-300"
-//           style={{
-//             left: hovered !== null ? leftOffsets[hovered] : leftOffsets[0],
-//             opacity: hovered !== null ? 1 : 0,
-//           }}
-//         ></div>
-
-//         {links.map((link, index) => (
-//           <Link href={link.href} key={index}>
-//             <div
-//               className="py-1 px-3 rounded-2xl hover:bg-gradient-to-b from-zinc-500 to-zinc-600/50 transition-all duration-700"
-//               onMouseEnter={() => setHovered(index)}
-//               onMouseLeave={() => setHovered(null)}
-//             >
-//               {link.name}
-//             </div>
-//           </Link>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Navbar;
-
