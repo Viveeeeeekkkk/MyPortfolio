@@ -112,7 +112,7 @@ const Home = () => {
           </Link>
 
           <Link
-            href="https://drive.google.com/file/d/1PiBS9yAXEXevv9TJ_7-nGV4Tx-3JMext/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1AKWuiFLHAdIJe85Iyv9x2IBzGlokfyht/view?usp=drive_link"
             target="_blank"
             className="flex items-center hover:scale-105 transition"
           >
